@@ -64,11 +64,10 @@ main .insights {
 main .insights > div {
     background: white;
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 20px;
     margin-top: 1rem;
     margin-left: 30px;
     box-shadow: var(--box-shadow);
-    transition: transform 0.2s, box-shadow 0.2s; /* animação suave */
 }
 
 main .insights > div:hover {
@@ -102,28 +101,28 @@ main h5 {
     color: rgb(90, 90, 90);
 }
 
-main .icon1 {
+main .icone1 {
     background: #006D77;
     padding: 0.5rem;
     border-radius: 30%;
     font-size: 30px;
     color: #fff;
 }
-main .icon2 {
+main .icone2 {
     background: green;
     padding: 0.5rem;
     font-size: 30px;
     border-radius: 30%;
     color: #fff;
 }
-main .icon3 {
+main .icone3 {
     background: green;
     padding: 0.5rem;
     font-size: 30px;
     border-radius: 30%;
     color: #fff;
 }
-main .icon4 {
+main .icone4 {
     background: darkred;
     padding: 0.5rem;
     font-size: 30px;
@@ -131,3 +130,94 @@ main .icon4 {
     color: #fff;
 }
 
+/* -------------- Documentos a Vencer -------------- */
+main .tabelas_secundarias {
+    display: flex;
+    margin: 2rem 2.3% 0 2.3%;
+}
+
+main .tabelas_secundarias > div {
+    flex: 1;
+}
+
+main .tabelas_secundarias h2 {    
+    margin-bottom: 0.5rem;
+    color: #006D77;
+}
+
+main .alertas_documentos h2 {
+    margin: 0;
+    font-size: 19px;
+    color: #006D77;
+}
+
+main .tabelas_secundarias table {
+    background: white;
+    width: 135%;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: var(--box-shadow);
+}
+
+main table tbody td {
+    height: 2.8rem;
+    border-bottom: 1px solid var(--secondary-color-light);
+}
+
+main table th {
+    text-align: left;
+}
+
+main .tabelas_secundarias a {
+    text-align: left;
+    font-weight: 500;
+    display: block;
+    margin-top: 0.5rem;
+    margin-left: 1%;
+    color: #006D77;
+    text-decoration: none;
+}
+
+/* -------------- Tabela de Alertas -------------- */
+main .alertas_documentos .alerta-card {
+    background: white;
+    border-radius: 15px;
+    margin-top: 3rem;
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-left: 45%;
+    height: 240px;
+}
+
+main .alerta-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+main .alerta-icone {
+    font-size: 1.8rem;
+    color: #006D77;
+}
+
+main .alerta-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+main .alerta-status {
+    font-size: 4.5rem;
+    color: #2F9E44;
+}
+
+main .alerta-body p {
+    font-size: 1.1rem;
+    color: #6C757D;
+}

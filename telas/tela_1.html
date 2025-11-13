@@ -12,13 +12,13 @@
 </head>
 <body>
     <main>
-        <h2 style="margin-left: 20px;"> Painel de Controle </h2>
+        <h2 style="margin-left: 40px; color: #006D77;"> Painel de Controle </h2>
 
         <!--- CONTAGEM TOTAL DE DOCUMENTOS --->
         <div class="insights">
             <div class="total_documentos">
         <div class="top-row">
-            <i class='bx bx-file icon1'></i>
+            <i class='bx bx-file icone1'></i>
             <div class="info_text">
                 <h5> Total de Documentos </h5>
                 <h1> 0 </h1>
@@ -29,7 +29,7 @@
         <!--- CONTAGEM DE PROFISSIONAIS --->
             <div class="profissionais">
                 <div class="top-row">
-                    <i class='bx bx-group icon2'></i>
+                    <i class='bx bx-group icone2'></i>
                     <div class="info-text">
                         <h5> Profissionais Ativos </h5>
                         <h1> 0 </h1>
@@ -40,7 +40,7 @@
         <!--- COMTAGEM DE DOCUMENTOS VÁLIDOS --->
             <div class="documentos_validos">
                 <div class="top-row">
-                    <i class='bx bx-check-circle icon3'></i>
+                    <i class='bx bx-check-circle icone3'></i>
                     <div class="info-text">
                         <h5> Documentos Válidos </h5>
                         <h1> 0 </h1>
@@ -51,7 +51,7 @@
         <!--- COMTAGEM DE ALERTAS PENDENTES --->
             <div class="alertas">
                 <div class="top-row">
-                    <i class='bx bx-bell icon4'></i>
+                    <i class='bx bx-bell icone4'></i>
                     <div class="info-text">
                         <h5> Alertas Pendentes </h5>
                         <h1> 0 </h1>
@@ -59,6 +59,66 @@
                 </div>
             </div>
         </div>
+        <!--- FIM DAS TABELAS DE CONTAGEM --->
+
+        <!--- TABELAS SECUNDÁRIAS --->
+        <div class="tabelas_secundarias">
+            <div class="vencimento_documentos">
+                <h2> Documentos a Vencer </h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th> Documento </th>
+                            <th> Vencimento </th>
+                            <th> Status </th>
+                            <th> Ação </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> COREN </td>
+                                <td> 10/10/2025 </td>
+                                <td class="danger"> Vencido </td>
+                                <td class="primary"> Editar </td>
+                            </tr>
+                            <tr>
+                                <td> COREN </td>
+                                <td> 01/12/2025 </td>
+                                <td class="warning"> A Vencer </td>
+                                <td class="primary"> Editar </td>
+                            </tr>
+                            <tr>
+                                <td> COREN </td>
+                                <td> 01/03/2026 </td>
+                                <td class="sucess"> Válido </td>
+                                <td class="primary"> Editar </td>
+                            </tr>
+                            <tr>
+                                <td> COREN </td>
+                                <td> 01/12/2026 </td>
+                                <td class="sucess"> Válido </td>
+                                <td class="primary"> Editar </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="#"> Ver Todos </a>
+                </div>
+
+                <div class="alertas_documentos">
+                    <div class="alerta-card">
+                        <div class="alerta-header">
+                            <i class='bx bx-bell alerta-icone'></i>
+                            <h2> Alertas Urgentes </h2>
+                        </div>
+                        <div class="alerta-body">
+                            <i class='bx bx-check-circle alerta-status'></i>
+                            <p> Tudo em dia! </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--- FIM DAS TABELAS SECUNDÁRIAS --->
     </main>
 </body>
 </html>
