@@ -47,6 +47,8 @@
 body {
     height: 100vh;
     background: var(--body-color);
+    margin-left: 17%;
+    
 }
 
 /* -------------- Contadores do Dashboard -------------- */
