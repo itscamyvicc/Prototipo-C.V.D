@@ -9,8 +9,8 @@
 
 :root {
     --body-color: #E4E9F7;
-    --sidebar-color: #006D77;
-    --primary-color: #83C5BE;
+    --sidebar-color: #003366;
+    --primary-color: #124b92;
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
     --text-color: #F8F9FA;
@@ -58,7 +58,7 @@ main {
 
 main .insights {
     display: grid;
-    grid-template-columns:  repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     margin-right: 50px;
 }
@@ -75,6 +75,11 @@ main .insights > div {
 main .insights > div:hover {
     transform: scale(1.04);
     transition: var(--tran-04);
+}
+
+h2 {
+    margin-left: 40px;
+    color: #003366;
 }
 
 .top-row {
@@ -104,7 +109,7 @@ main h5 {
 }
 
 main .icone1 {
-    background: #006D77;
+    background: #003366;
     padding: 0.5rem;
     border-radius: 30%;
     font-size: 30px;
@@ -142,15 +147,16 @@ main .tabelas_secundarias > div {
     flex: 1;
 }
 
-main .tabelas_secundarias h2 {    
+main .tabelas_secundarias h2 { 
     margin-bottom: 0.5rem;
-    color: #006D77;
+    margin-left: 0.5rem;
+    color: #003366;
 }
 
 main .alertas_documentos h2 {
     margin: 0;
     font-size: 19px;
-    color: #006D77;
+    color: #003366;
 }
 
 main .tabelas_secundarias table {
@@ -176,7 +182,7 @@ main .tabelas_secundarias a {
     display: block;
     margin-top: 0.5rem;
     margin-left: 1%;
-    color: #006D77;
+    color: #003366;
     text-decoration: none;
 }
 

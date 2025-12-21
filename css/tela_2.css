@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-color: #E4E9F7;
+    --sidebar-color: #003366;
+    --primary-color: #124b92;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #F8F9FA;
+    --secondary-color-light: rgba(132, 139, 200, 0.18);
+
+    /* --- Cores de Notificação --- */
+    --color-danger: #ff7782;
+    --color-sucess: #41f1b6;
+    --color-warning: #ffbb55;
+
+    /* --- Sombra da Caixa --- */
+    --box-shadow: 0 2rem 3rem var(--secondary-color-light);
+
+    /* --- Animação de Transição --- */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+
+.danger {
+    color: var(--color-danger);
+}
+
+.sucess {
+    color: var(--color-sucess);
+}
+
+.warning {
+    color: var(--color-warning);
+}
+
+/* -------------- Menu -------------- */
+body {
+    height: 100vh;
+    background: var(--body-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--body-color);
+}
+
+main {
+    margin-top: 1.4rem;
+}
+
+/* -------------- Cadastro de Profissional -------------- */
+.tabela_primaria {
+    position: relative;
+    max-width: 900px;
+    margin-left: 18%;
+    margin-bottom: 45px;
+    width: 100%;
+    background-color: #FFF;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: var(--box-shadow);
+}
+
+.tabela_primaria header {
+    font-size: 20px;
+    font-weight: 600;
+    color: #003366;
+}
+
+.tabela_primaria form {
+    position: relative;
+    margin-top: 16px;
+    min-height: 490px;
+    background-color: #FFF;
+}
+
+.tabela_primaria form .details {
+    margin-top: 30px;
+}
+
+.tabela_primaria form .title {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: #333;
+}
+
+.tabela_primaria form .fields {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+form .fields .input-field {
+    display: flex;
+    width: calc(100% / 3 - 15px);
+    flex-direction: column;
+    margin: 4px 0;
+}
+
+.input-field label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #333;
+}
+
+.input-field input {
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 7px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 35px;
+    margin: 8px 0;
+    width: 390px;
+}
+
+.input-field input:is(:focus, :valid) {
+    box-shadow: 0 3px 6px rgba(132, 139, 200, 0.18)
+}
+
+.input-field input[type="date"] {
+    color: #707070;
+}
+
+.input-field input[type="date"]:valid {
+   color: #333;
+}
