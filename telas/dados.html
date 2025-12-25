@@ -15,7 +15,6 @@
         </div>
     </header>
 
-
     <div class="cards-container">
         <div class="card-import">
             <div class="icone-import">
@@ -33,11 +32,13 @@
             <div class="input-container">
                 <label for="arquivo"></label>
                 <input type="file" id="arquivo" accept=".csv"><br>
-                <span class="name">Formato esperado: Arquivo CSV com colunas de profissionais e documentos.</span>
+                <div class="nota-info">
+                    <span>Formato esperado: Arquivo CSV com colunas de profissionais e documentos.</span>
+                </div>
             </div>
-                <button>Importar Arquivo</button>
+            <button>Importar Arquivo</button>
         </div>
-        
+
         <div class="card-export">
             <div class="icone-export">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -49,10 +50,11 @@
                 </svg>
             </div>
             <h4>Exportar Dados</h3>
-            <p>Gere um arquivo CSV com seus dados cadastro</p>
-            <span class="name">Nota: Os arquivos CSV podem ser abertos no Excel para análise ou edição.</span><br>
-            <span>O arquivo CSV gerado pode ser usado em sistemas externos ou para auditoria de dados.</span>
-            <button>Exportar CSV Combinado</button>
+                <p>Gere um arquivo CSV com seus dados cadastro</p>
+                <span class="name">Nota: Os arquivos CSV podem ser abertos no Excel para análise ou edição.</span><br>
+                <span class="name">O arquivo CSV gerado pode ser usado em sistemas externos ou para auditoria de
+                    dados.</span><br>
+                <button>Exportar CSV Combinado</button>
         </div>
     </div>
 </body>

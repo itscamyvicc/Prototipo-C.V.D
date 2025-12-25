@@ -45,42 +45,101 @@
 
 /* -------------- Menu -------------- */
 body {
+    width: 100%;
     height: 100vh;
     background: var(--body-color);
 }
 
 /*----------Titulo------------*/
 
-header{
-  display: flex;
-  justify-content: space-between; 
-  align-items: center;
-  margin: 20px;
+header {
+  margin: 25px;
+}
+
+
+.titulos h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.titulos h3 {
+  font-size: 14px;
+  color: #666;
+  font-weight: normal;
 }
 
 /*-------------Cards-------------*/
 
-.cards-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
+.cards-container {
+   display: flex;  
+  gap: 30px;
+  padding: 30px;
 }
 
-.card-import{
-    flex: 1;
-    background-color: #fff;
-    border-radius: 12px;
-    padding: 24px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    width: 400px;
+.card-import,
+.card-export {
+  flex: 1; 
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.card-export{
-    flex: 2;
-    background-color: #fff;
-    border-radius: 12px;
-    padding: 24px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    width: 400px;
+/***********Input de Arquivo****************/
+.input-container {
+  margin: 20px 0;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fafafa;
+}
+
+input[type="file"] {
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 12px;
+  color: #666;
+  display: block;
+  margin-top: 10px;
+}
+
+/*************Caixas de Nota***************/
+.card-export span.name {
+  display: block;
+  background-color: #e3f2fd; /* azul clarinho */
+  border-left: 4px solid #2196f3; /* azul mais forte */
+  padding: 12px;
+  border-radius: 4px;
+  margin: 16px 0;
+  font-size: 13px;
+  color: #333;
+}
+
+.nota-info {
+  background-color: #e8f4f8;  /* azul bem clarinho */
+  border-left: 4px solid #0066cc;  /* barra azul na esquerda */
+  padding: 12px;
+  border-radius: 4px;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #555;
+}
+
+/*************Botões*****************/
+button {
+  width: 100%;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #0052a3;
 }
