@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-color: #E4E9F7;
+    --sidebar-color: #006D77;
+    --primary-color: #83C5BE;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #F8F9FA;
+    --secondary-color-light: rgba(132, 139, 200, 0.18);
+
+    /* --- Cores de Notificação --- */
+    --color-danger: #ff7782;
+    --color-sucess: #41f1b6;
+    --color-warning: #ffbb55;
+
+    /* --- Sombra da Caixa --- */
+    --box-shadow: 0 2rem 3rem var(--secondary-color-light);
+
+    /* --- Animação de Transição --- */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+
+.danger {
+    color: var(--color-danger);
+}
+
+.sucess {
+    color: var(--color-sucess);
+}
+
+.warning {
+    color: var(--color-warning);
+}
+
+/* -------------- Menu -------------- */
+body {
+    height: 100vh;
+    background: var(--body-color);
+}
+
+/*----------Titulo------------*/
+
+header{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  margin: 20px;
+}
+
+/*-------------Cards-------------*/
+
+.cards-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card-import{
+    flex: 1;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 400px;
+}
+
+.card-export{
+    flex: 2;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 400px;
+}

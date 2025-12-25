@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-color: #E4E9F7;
+    --sidebar-color: #006D77;
+    --primary-color: #83C5BE;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #F8F9FA;
+    --secondary-color-light: rgba(132, 139, 200, 0.18);
+
+    /* --- Cores de Notificação --- */
+    --color-danger: #ff7782;
+    --color-sucess: #41f1b6;
+    --color-warning: #ffbb55;
+
+    /* --- Sombra da Caixa --- */
+    --box-shadow: 0 2rem 3rem var(--secondary-color-light);
+
+    /* --- Animação de Transição --- */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+
+.danger {
+    color: var(--color-danger);
+}
+
+.sucess {
+    color: var(--color-sucess);
+}
+
+.warning {
+    color: var(--color-warning);
+}
+
+/* -------------- Menu -------------- */
+body {
+    height: 100vh;
+    background: var(--body-color);
+}
+
+/*--------------titulos------------*/
+
+header{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  margin: 25px;
+}
+
+
+.pendentes{
+  background-color: rgb(248, 88, 88) ;
+  color: #fff; 
+  border: 1px solid #e74c3c;
+  border-radius: 15px;
+  padding: 5px; 
+  margin-right: 40px;
+}
+/* ----------- Filtro de Alertas -----------*/
+.filtros-container{
+    background-color: #fff;
+    margin-left: 40px;
+    padding: 10px;
+    width: 90%;
+}
+
+.filtro{
+    padding: 10px;
+}
+
+/*------- Contagem de Alertas---------*/
+
+.alerta-vazio{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10 0 0 40px;
+  width: 90%;
+}
+
+.icone-check{
+    padding: 25px 0 0 0;
+    margin: 15px;
+    color: #0aa539;
+}
+
+.titulo{
+    margin: 5px;
+    color: #006D77;
+}
+
+.subtitulo{
+    margin: 5px;
+    padding: 0 0 25px 0;
+}
