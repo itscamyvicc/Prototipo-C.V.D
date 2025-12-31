@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
@@ -45,9 +45,10 @@
 
 /* -------------- Menu -------------- */
 body {
-    width: 100%;
     height: 100vh;
     background: var(--body-color);
+    margin-left: 17%;
+    
 }
 
 /*----------Titulo------------*/
@@ -68,81 +69,14 @@ header {
   font-weight: normal;
 }
 
-/*-------------Cards-------------*/
-
-.cards-container {
-   display: flex;  
-  gap: 30px;
-  padding: 30px;
+/************Principal***********/
+main {
+    padding: 30px;
+    max-width: 1200px;
 }
 
-.card-import,
-.card-export {
-  flex: 1; 
-  background: white;
-  border-radius: 8px;
-  padding: 24px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-/*************I
-
-/***********Input de Arquivo****************/
-.input-container {
-  margin: 20px 0;
-  padding: 16px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  background-color: #fafafa;
-}
-
-input[type="file"] {
-  margin-bottom: 10px;
-}
-
-.name {
-  font-size: 12px;
-  color: #666;
-  display: block;
-  margin-top: 10px;
-}
-
-/*************Caixas de Nota***************/
-.card-export span.name {
-  display: block;
-  background-color: #e3f2fd; 
-  border-left: 4px solid #2196f3; 
-  padding: 12px;
-  border-radius: 4px;
-  margin: 16px 0;
-  font-size: 13px;
-  color: #333;
-}
-
-.nota-info {
-  background-color: #e8f4f8;  
-  border-left: 4px solid #0066cc;  
-  padding: 12px;
-  border-radius: 4px;
-  margin-top: 10px;
-  font-size: 13px;
-  color: #555;
-}
-
-/*************Botões*****************/
-button {
-  width: 100%;
-  background-color: #0066cc;
-  color: white;
-  border: none;
-  padding: 12px;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-button:hover {
-  background-color: #0052a3;
+/***********Cards***************/
+.card{
+    background-color: #f3f3f3;
+    width: 90%;
 }
