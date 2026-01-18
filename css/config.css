@@ -9,7 +9,7 @@
 
 :root {
     --body-color: #E4E9F7;
-    --sidebar-color: #006D77;
+    --sidebar-color: #003366;
     --primary-color: #83C5BE;
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
@@ -47,10 +47,18 @@
 body {
     height: 100vh;
     background: var(--body-color);
-    margin-left: 17%;
+    margin-left: 250px; 
+    padding: 20px;
+    }
     
-}
-
+   
+    @media (max-width: 768px) {
+       body {
+    margin-left: 0;
+    margin-top: 150px; 
+       }
+    }
+    
 /*----------Titulo------------*/
 
 header {

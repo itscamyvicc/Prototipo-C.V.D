@@ -9,8 +9,8 @@
 
 :root {
     --body-color: #E4E9F7;
-    --sidebar-color: #006D77;
-    --primary-color: #83C5BE;
+    --sidebar-color: #003366;
+    --primary-color: #1755a0;
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
     --text-color: #F8F9FA;
@@ -47,6 +47,15 @@
 body {
     height: 100vh;
     background: var(--body-color);
+    margin-left: 250px; 
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    body {
+        margin-left: 0;
+        margin-top: 150px; 
+    }
 }
 
 /*--------------titulos------------*/
@@ -72,7 +81,8 @@ header{
     background-color: #fff;
     margin-left: 40px;
     padding: 10px;
-    width: 90%;
+    width: 80%;
+    border-radius: 6px;
 }
 
 .filtro{
@@ -87,8 +97,9 @@ header{
     flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10 0 0 40px;
-  width: 90%;
+  margin: 20px 0 0 40px;
+  border-radius: 6px;
+  width: 80%;
 }
 
 .icone-check{
