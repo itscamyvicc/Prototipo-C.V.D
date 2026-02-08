@@ -45,12 +45,12 @@
 
 /* -------------- Menu -------------- */
 body {
-    height: 100vh;
+    min-height: 100vh;
     background: var(--body-color);
     display: flex;
+    flex-direction: column;
+    padding: 40px 0;
     align-items: center;
-    justify-content: center;
-    background: var(--body-color);
 }
 
 main {
@@ -61,8 +61,8 @@ main {
 .tabela_primaria {
     position: relative;
     max-width: 900px;
-    margin-left: 18%;
-    margin-bottom: 45px;
+    margin: 50px auto;
+    margin-right: 120px;
     width: 100%;
     background-color: #FFF;
     border-radius: 15px;
@@ -79,7 +79,7 @@ main {
 .tabela_primaria form {
     position: relative;
     margin-top: 16px;
-    min-height: 490px;
+    min-height: 100%;
     background-color: #FFF;
 }
 
@@ -104,7 +104,6 @@ main {
 
 form .fields .input-field {
     display: flex;
-    width: calc(100% / 3 - 15px);
     flex-direction: column;
     margin: 4px 0;
 }
@@ -115,7 +114,8 @@ form .fields .input-field {
     color: #333;
 }
 
-.input-field input {
+.input-field input,
+.input-field select {
     outline: none;
     font-size: 14px;
     font-weight: 400;
@@ -138,4 +138,140 @@ form .fields .input-field {
 
 .input-field input[type="date"]:valid {
    color: #333;
+}
+
+.tabela_primaria form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #FFF;
+    border-radius: 5px;
+    margin: 25px 0;
+    background-color: #124b92;
+    transition: var(--tran-03);
+    cursor: pointer;
+}
+
+.tabela_primaria button:hover {
+    background-color: #003366;
+}
+
+/* -------------- Área da Lista (centralização da caixa) -------------- */
+
+.lista-profissionais {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 320px;
+
+}
+
+/* --- Filtragem e Card de Profissional --- */
+
+.topo-lista {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.busca {
+    height: 40px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    padding: 8px 12px;
+    border: 1px solid #555;
+}
+
+.busca input {
+    border: none;
+    outline: none;
+    flex: 1;
+}
+
+.filtro select {
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #555;
+    padding: 0 10px;
+    background: #fff;
+}
+
+.card-profissional {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    background: #fff;
+    padding: 18px;
+    border-radius: 12px;
+    border: 1px solid #555;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    margin-bottom: 15px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #0d47a1;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.top-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit-icon {
+    font-size: 20px;
+    cursor: pointer;
+    color: #0d47a1;
+}
+
+.badges {
+    margin: 6px 0 10px 0;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-right: 6px;
+    font-weight: 500;
+}
+
+.badge.ativo { background: #d4f8e8; color: #1b8a5a; }
+.badge.cargo { background: #e3f0ff; color: #2f5bd3; }
+.badge.setor { background: #efe7ff; color: #6a3de8; }
+.badge.vencendo { background: #fff3cd; color: #b78103; }
+
+.card-profissional p {
+    margin: 3px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.conteudo-lista {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: var(--box-shadow);
 }
