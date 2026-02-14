@@ -1,129 +1,202 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Dashboard </title>
-    <!-- CSS -->
-    <link rel="stylesheet" href="/css/dashboard.css">
+    <title>Dashboard</title>
 
-    <!-- Boxicons CSS-->
+    <link rel="stylesheet" href="/css/dashboard.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <main>
-        <h2> Painel de Controle </h2>
 
-    <!--- CONTAGEM TOTAL DE DOCUMENTOS --->
-        <div class="insights">
-            <div class="total_documentos">
-        <div class="top-row">
-            <i class='bx bx-file icone1'></i>
-            <div class="info_text">
-                <h5> Total de Documentos </h5>
-                <h1> 0 </h1>
+    <!-- CABEÇALHO -->
+    <h1 class="page-title">Painel de Controle</h1>
+
+    <!-- CARDS DE ESTATÍSTICAS -->
+    <div class="cards-estatisticas">
+
+        <div class="card-stat">
+            <div class="card-stat-icon icon-blue">
+                <i class='bx bx-file'></i>
+            </div>
+            <div class="card-stat-info">
+                <span class="card-stat-label">Total de Documentos</span>
+                <span class="card-stat-valor">7</span>
             </div>
         </div>
+
+        <div class="card-stat">
+            <div class="card-stat-icon icon-teal">
+                <i class='bx bx-group'></i>
+            </div>
+            <div class="card-stat-info">
+                <span class="card-stat-label">Profissionais Ativos</span>
+                <span class="card-stat-valor">4</span>
+            </div>
+        </div>
+
+        <div class="card-stat">
+            <div class="card-stat-icon icon-green">
+                <i class='bx bx-check-circle'></i>
+            </div>
+            <div class="card-stat-info">
+                <span class="card-stat-label">Documentos Válidos</span>
+                <span class="card-stat-valor">3</span>
+            </div>
+        </div>
+
+        <div class="card-stat">
+            <div class="card-stat-icon icon-red">
+                <i class='bx bx-bell'></i>
+            </div>
+            <div class="card-stat-info">
+                <span class="card-stat-label">Alertas Pendentes</span>
+                <span class="card-stat-valor">0</span>
+            </div>
+        </div>
+
     </div>
-    <!--- FIM DA CONTAGEM TOTAL DE DOCUMENTOS --->
 
-        <!--- CONTAGEM DE PROFISSIONAIS --->
-            <div class="profissionais">
-                <div class="top-row">
-                    <i class='bx bx-group icone2'></i>
-                    <div class="info-text">
-                        <h5> Profissionais Ativos </h5>
-                        <h1> 0 </h1>
+    <!-- LINHA DO MEIO: VENCENDO EM BREVE + ALERTAS URGENTES -->
+    <div class="linha-meio">
+
+        <!-- DOCUMENTOS VENCENDO EM BREVE -->
+        <div class="card-secao card-vencendo">
+            <div class="secao-header">
+                <div class="secao-titulo">
+                    <i class='bx bx-time-five'></i>
+                    <h2>Documentos Vencendo em Breve</h2>
+                </div>
+                <a href="#" class="ver-todos">Ver Todos</a>
+            </div>
+
+            <div class="item-vencendo">
+                <div class="item-vencendo-icon">
+                    <i class='bx bx-error'></i>
+                </div>
+                <div class="item-vencendo-info">
+                    <div class="item-vencendo-topo">
+                        <strong>COREN</strong>
+                        <span class="badge-dias">7 dias</span>
                     </div>
+                    <span class="item-vencendo-prof">Carlos Eduardo Santos</span>
                 </div>
             </div>
-        <!--- FIM DA CONTAGEM DE PROFISSIONAIS --->
 
-        <!--- COMTAGEM DE DOCUMENTOS VÁLIDOS --->
-            <div class="documentos_validos">
-                <div class="top-row">
-                    <i class='bx bx-check-circle icone3'></i>
-                    <div class="info-text">
-                        <h5> Documentos Válidos </h5>
-                        <h1> 0 </h1>
-                    </div>
+        </div>
+
+        <!-- ALERTAS URGENTES -->
+        <div class="card-secao card-alertas">
+            <div class="secao-header">
+                <div class="secao-titulo">
+                    <i class='bx bx-bell'></i>
+                    <h2>Alertas Urgentes</h2>
                 </div>
             </div>
-        <!--- FIM DA CONTAGEM DE DOCUMENTOS VÁLIDOS --->
 
-        <!--- COMTAGEM DE ALERTAS PENDENTES --->
-            <div class="alertas">
-                <div class="top-row">
-                    <i class='bx bx-bell icone4'></i>
-                    <div class="info-text">
-                        <h5> Alertas Pendentes </h5>
-                        <h1> 0 </h1>
-                    </div>
-                </div>
+            <div class="alertas-ok">
+                <i class='bx bx-check-circle'></i>
+                <p>Tudo em dia!</p>
             </div>
         </div>
-        <!--- FIM DA COMTAGEM DE ALERTAS PENDENTES --->
 
-        <!--- FIM DAS TABELAS DE CONTAGEM --->
+    </div>
 
-        <!--- TABELAS SECUNDÁRIAS --->
-        <div class="tabelas_secundarias">
-            <div class="vencimento_documentos">
-                <h2> Documentos a Vencer </h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th> Documento </th>
-                            <th> Vencimento </th>
-                            <th> Status </th>
-                            <th> Ação </th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td> COREN </td>
-                                <td> 10/10/2025 </td>
-                                <td class="danger"> Vencido </td>
-                                <td class="primary"> Editar </td>
-                            </tr>
-                            <tr>
-                                <td> COREN </td>
-                                <td> 01/12/2025 </td>
-                                <td class="warning"> A Vencer </td>
-                                <td class="primary"> Editar </td>
-                            </tr>
-                            <tr>
-                                <td> COREN </td>
-                                <td> 01/03/2026 </td>
-                                <td class="sucess"> Válido </td>
-                                <td class="primary"> Editar </td>
-                            </tr>
-                            <tr>
-                                <td> COREN </td>
-                                <td> 01/12/2026 </td>
-                                <td class="sucess"> Válido </td>
-                                <td class="primary"> Editar </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <a href="#"> Ver Todos </a>
-                </div>
+    <!-- LINHA INFERIOR: GRÁFICOS -->
+    <div class="linha-graficos">
 
-                <div class="alertas_documentos">
-                    <div class="alerta-card">
-                        <div class="alerta-header">
-                            <i class='bx bx-bell alerta-icone'></i>
-                            <h2> Alertas Urgentes </h2>
-                        </div>
-                        <div class="alerta-body">
-                            <i class='bx bx-check-circle alerta-status'></i>
-                            <p> Tudo em dia! </p>
-                        </div>
-                    </div>
-                </div>
+        <div class="card-secao">
+            <h2 class="grafico-titulo">Documentos em Atraso por Setor</h2>
+            <div class="grafico-container">
+                <canvas id="graficoBarras"></canvas>
             </div>
         </div>
-        <!--- FIM DAS TABELAS SECUNDÁRIAS --->
-    </main>
+
+        <div class="card-secao">
+            <h2 class="grafico-titulo">Tipos de Documento</h2>
+            <div class="grafico-container">
+                <canvas id="graficoRosca"></canvas>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // --- Gráfico de Barras ---
+        const ctxBarras = document.getElementById('graficoBarras').getContext('2d');
+        new Chart(ctxBarras, {
+            type: 'bar',
+            data: {
+                labels: ['Enfermagem', 'Fisioterapia', 'Radiologia', 'Emergência', 'Terapia'],
+                datasets: [{
+                    data: [1, 1, 1, 1, 1],
+                    backgroundColor: '#124b92',
+                    borderRadius: 6,
+                    borderSkipped: false,
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: { stepSize: 0.25 },
+                        grid: { color: 'rgba(0,0,0,0.05)' }
+                    },
+                    x: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+
+        // --- Gráfico de Rosca ---
+        const ctxRosca = document.getElementById('graficoRosca').getContext('2d');
+        new Chart(ctxRosca, {
+            type: 'doughnut',
+            data: {
+                labels: ['COREN', 'CRF', 'CRM', 'CREFITO', 'ASO'],
+                datasets: [{
+                    data: [50, 13, 13, 13, 13],
+                    backgroundColor: [
+                        '#003366',
+                        '#1565c0',
+                        '#1976d2',
+                        '#42a5f5',
+                        '#90caf9'
+                    ],
+                    borderWidth: 2,
+                    borderColor: '#fff'
+                }]
+            },
+            options: {
+                cutout: '65%',
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        labels: {
+                            font: { size: 12, family: 'Poppins' },
+                            padding: 16,
+                            generateLabels: (chart) => {
+                                const data = chart.data;
+                                return data.labels.map((label, i) => ({
+                                    text: `${label} ${data.datasets[0].data[i]}%`,
+                                    fillStyle: data.datasets[0].backgroundColor[i],
+                                    strokeStyle: '#fff',
+                                    lineWidth: 2,
+                                    index: i
+                                }));
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
 </body>
 </html>
