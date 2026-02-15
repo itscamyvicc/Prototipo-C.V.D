@@ -41,20 +41,24 @@
                 </svg>
                 <h3>Notificações por Email</h3>
             </div>
-            <div class="campo">
-                <div class="checkbox-container">
-                    <label for="email-alertas">Dias de Antecedência para Alertas(Padrão)</label>
-                    <input type="checkbox" id="email-alertas">
-                    <p class="descricao">Enviar alertas por email quando...</p>
+            
+            <div class="campo checkbox-field">
+                <div class="checkbox-wrapper">
+                    <div class="checkbox-label">
+                        <label for="email-alertas">Dias de Antecedência para Alertas (Padrão)</label>
+                        <p class="descricao">Enviar alertas por email quando documentos estiverem próximos do vencimento</p>
+                    </div>
+                    <input type="checkbox" id="email-alertas" checked>
                 </div>
+            </div>
 
                 <div class="campo">
                     <label for="frequencia-email">Frequência de Emails</label>
                     <select id="frequencia-email">
                         <option>Diária</option>
-
                     </select>
                 </div>
+            </div>
             </div>
 
             <div class="card">
@@ -66,14 +70,16 @@
                     </svg>
                     <h3>Notificações por WhatsApp</h3>
                 </div>
-                <div class="campo">
-                    <div class="checkbox-container">
-                        <label for="email-alertas">Receber notificações no WhatsApp</label>
-                        <input type="checkbox" id="email-alertas">
-                        <p class="descricao">Enviar alertas por WhatsApp quando documentos estiverem próximos do
-                            vencimento</p>
+                
+                <div class="campo checkbox-field">
+                <div class="checkbox-wrapper">
+                    <div class="checkbox-label">
+                        <label for="whatsapp-alertas">Receber notificações no WhatsApp</label>
+                        <p class="descricao">Enviar alertas por WhatsApp quando documentos estiverem próximos do vencimento</p>
                     </div>
+                    <input type="checkbox" id="whatsapp-alertas">
                 </div>
+            </div>
 
                 <div class="campo">
                     <label for="numero-whatsapp">Número do WhatsApp</label>
@@ -90,7 +96,11 @@
                     </select>
                 </div>
             </div>
+
+            <div class="button-container">
+            <button class="btn-salvar">Salvar Configurações</button>
         </div>
+    
     </main>
 
 </body>
