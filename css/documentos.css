@@ -1,48 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-* {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
     --body-color: #E4E9F7;
-    --sidebar-color: #003366;
     --primary-color: #124b92;
-    --primary-color-light: #F6F5FF;
-    --toggle-color: #DDD;
-    --text-color: #F8F9FA;
     --secondary-color-light: rgba(132, 139, 200, 0.18);
-
-    /* --- Cores de Notificação --- */
     --color-danger: #ff7782;
     --color-sucess: #41f1b6;
     --color-warning: #ffbb55;
-
-    /* --- Sombra da Caixa --- */
     --box-shadow: 0 2rem 3rem var(--secondary-color-light);
-
-    /* --- Animação de Transição --- */
     --tran-03: all 0.3s ease;
-    --tran-04: all 0.4s ease;
-    --tran-05: all 0.5s ease;
 }
 
 .danger  { color: var(--color-danger); }
 .sucess  { color: var(--color-sucess); }
 .warning { color: var(--color-warning); }
-
-/* -------------- Body -------------- */
-body {
-    min-height: 100vh;
-    background: var(--body-color);
-    display: flex;
-    flex-direction: column;
-    padding: 40px 60px 40px 340px;
-    align-items: center;
-}
 
 /* -------------- Cabeçalho da Página -------------- */
 .page-header {
@@ -50,7 +21,6 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1100px;
     margin-bottom: 10px;
 }
 
@@ -64,6 +34,7 @@ body {
     font-size: 13px;
     color: #777;
     margin-top: 2px;
+    margin-bottom: 20px;
 }
 
 .btn-novo {
@@ -81,6 +52,7 @@ body {
     font-weight: 500;
     cursor: pointer;
     transition: var(--tran-03);
+    margin-bottom: 20px;
 }
 
 .btn-novo:hover {
@@ -89,14 +61,11 @@ body {
 
 /* -------------- Tabela de Cadastro -------------- */
 .tabela_primaria {
-    position: relative;
-    max-width: 1100px;
-    margin: 15px auto 50px auto;
     width: 100%;
     background-color: #fff;
     border-radius: 15px;
     padding: 30px;
-    box-shadow: var(--box-shadow);
+    margin-bottom: 40px;
 }
 
 .tabela_primaria header {
@@ -118,12 +87,10 @@ body {
 .tabela_primaria form .fields {
     display: grid;
     align-items: center;
-    justify-content: space-between;
     grid-template-columns: repeat(2, 1fr);
     gap: 0 20px;
 }
 
-/* Campo que ocupa as duas colunas */
 .input-field.full-width {
     grid-column: 1 / -1;
 }
@@ -140,9 +107,7 @@ form .fields .input-field {
     color: #333;
 }
 
-.obrigatorio {
-    color: var(--color-danger);
-}
+.obrigatorio { color: var(--color-danger); }
 
 .input-field input,
 .input-field select {
@@ -151,26 +116,16 @@ form .fields .input-field {
     font-weight: 400;
     color: #333;
     border-radius: 7px;
-    border: 1px solid #aaa;
     padding: 0 15px;
     height: 35px;
     margin: 8px 0;
     width: 100%;
-}
-
-.input-field input:is(:focus, :valid) {
     box-shadow: none;
 }
 
-.input-field input[type="date"] {
-    color: #707070;
-}
+.input-field input[type="date"] { color: #707070; }
+.input-field input[type="date"]:valid { color: #333; }
 
-.input-field input[type="date"]:valid {
-    color: #333;
-}
-
-/* -------------- Botão Cadastrar -------------- */
 .tabela_primaria form button {
     display: flex;
     align-items: center;
@@ -194,14 +149,19 @@ form .fields .input-field {
     background-color: #003366;
 }
 
-/* -------------- Área da Lista -------------- */
+/* -------------- Lista de Documentos -------------- */
 .lista-profissionais {
     width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
-/* --- Filtragem --- */
+.conteudo-lista {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    width: 100%;
+    box-shadow: var(--box-shadow);
+}
+
 .topo-lista {
     display: flex;
     justify-content: space-between;
@@ -235,7 +195,6 @@ form .fields .input-field {
     background: #fff;
 }
 
-/* --- Card de Documento --- */
 .card-profissional {
     width: 100%;
     display: flex;
@@ -244,7 +203,7 @@ form .fields .input-field {
     padding: 18px;
     border-radius: 12px;
     border: 1px solid #555;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.06);
     margin-bottom: 15px;
 }
 
@@ -281,9 +240,7 @@ form .fields .input-field {
     color: #0d47a1;
 }
 
-.badges {
-    margin: 6px 0 10px 0;
-}
+.badges { margin: 6px 0 10px 0; }
 
 .badge {
     display: inline-block;
@@ -305,16 +262,4 @@ form .fields .input-field {
     color: #555;
 }
 
-.info {
-    flex: 1;
-}
-
-/* -------------- Conteúdo da Lista -------------- */
-.conteudo-lista {
-    background: #fff;
-    padding: 25px;
-    border-radius: 15px;
-    width: 100%;
-    max-width: 1100px;
-    box-shadow: var(--box-shadow);
-}
+.info { flex: 1; }

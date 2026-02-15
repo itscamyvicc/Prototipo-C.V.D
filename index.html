@@ -1,75 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> C.V.D - Controle de Validade Documental </title>
-    <!-- CSS -->
+    <title>C.V.D - Controle de Validade Documental</title>
+
+    <!-- CSS principal -->
     <link rel="stylesheet" href="/css/tela_inicial.css">
 
-    <!-- Boxicons CSS-->
+    <!-- Boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
-<nav class="sidebar">
-    <header>
-        <div class="image-text">
-            <span class="image">
-                <img src="imagens/logo.jpg" alt="logo">
-            </span>
-            <div class="text header-text">
-                <span class="name"> C.V.D </span>
-                <span class="profession"> Controle de Validade Documental </span>
+
+    <!-- ===== SIDEBAR ===== -->
+    <nav class="sidebar">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="/imagens/logo.jpg" alt="logo">
+                </span>
+                <div class="text header-text">
+                    <span class="name">C.V.D</span>
+                    <span class="profession">Controle de Validade Documental</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <h4>Navegação Principal</h4>
+
+                    <li class="nav-link">
+                        <a href="#" data-tela="dashboard" class="ativo">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#" data-tela="profissionais">
+                            <i class='bx bx-id-card icon'></i>
+                            <span class="text nav-text">Profissionais</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#" data-tela="documentos">
+                            <i class='bx bx-file icon'></i>
+                            <span class="text nav-text">Documentos</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#" data-tela="alertas">
+                            <i class='bx bxs-bell-ring icon'></i>
+                            <span class="text nav-text">Alertas</span>
+                        </a>
+                    </li>
+
+                    <h4>Administração</h4>
+
+                    <li class="nav-link">
+                        <a href="#" data-tela="configuracoes">
+                            <i class='bx bx-cog icon'></i>
+                            <span class="text nav-text">Configurações</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#" id="btn-sair">
+                            <i class='bx bx-log-out icon'></i>
+                            <span class="text nav-text">Sair</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-</header>
+    </nav>
 
-    <div class="menu-bar">
-        <div class="menu">
-            <ul class="menu-links">
-                <h4 style="color: #74b2ff; padding-top: 30px; "> Navegação Principal </h4>
-                <li class="nav-link">
-                    <a href="/telas/dashboard.html" target="iframe_a">
-                        <i class='bx bx-home-alt icon'></i>
-                        <span class="text nav-text"> Dashboard </span>
-                    </a>
-                </li>
-                <li class="nav-link">
-                    <a href="/telas/profissinais.html" target="iframe_a">
-                        <i class='bx bx-id-card icon'></i>
-                        <span class="text nav-text"> Profissionais </span>
-                    </a>
-                </li>
-                <li class="nav-link">
-                    <a href="/telas/documentos.html" target="iframe_a">
-                        <i class='bx bx-file icon'></i>
-                        <span class="text nav-text"> Documentos </span>
-                    </a>
-                </li>
-                <li class="nav-link">
-                    <a href="#">
-                        <i class='bx bxs-bell-ring icon'></i>
-                        <span class="text nav-text"> Alertas </span>
-                    </a>
-                </li>
-                <h4 style="color: #74b2ff; padding-top: 50px; "> Administração </h4>
-                <li class="nav-link">
-                    <a href="#">
-                        <i class='bx bx-cog icon'></i>
-                        <span class="text nav-text"> Configurações </span>
-                    </a>
-                </li>
-                <li class="nav-link">
-                    <a href="#">
-                        <i class='bx bx-log-out icon'></i>
-                        <span class="text nav-text"> Sair </span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<iframe name="iframe_a" height="100%" width="100%" title="Iframe Example"></iframe>
+    <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+    <main class="conteudo-principal" id="conteudo-principal">
+        <div class="loading-tela">Carregando...</div>
+    </main>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="/js/app.js"></script>
+
 </body>
 </html>
