@@ -7,10 +7,11 @@ const conteudo = document.getElementById('conteudo-principal');
 // Mapa de telas: chave = data-tela, valor = caminho do arquivo HTML
 const telas = {
     dashboard:      '/telas/dashboard.html',
-    profissionais:  '/telas/profissionais.html',   // mantendo o nome original do arquivo
+    profissionais:  '/telas/profissionais.html',
     documentos:     '/telas/documentos.html',
-    alertas:        null,       // ainda sem tela definida
-    configuracoes:  null,       // ainda sem tela definida
+    alertas:        '/telas/alertas.html',
+    dados:          '/telas/dados.html',
+    configuracoes:  '/telas/config.html',  
 };
 
 // CSS específico de cada tela (carregados dinamicamente)
@@ -18,6 +19,9 @@ const cssTelas = {
     dashboard:      '/css/dashboard.css',
     profissionais:  '/css/profissionais.css',
     documentos:     '/css/documentos.css',
+    alertas:        '/css/alertas.css',
+    dados:          '/css/dados.css',
+    configuracoes:  '/css/config.css',
 };
 
 // CSS já carregados (evita duplicatas)
@@ -44,7 +48,7 @@ function carregarCSS(tela) {
 //  Carrega o HTML de uma tela via fetch
 // -----------------------------------------------
 async function carregarTela(tela) {
-    if (tela === telaAtiva) return;
+    if (tela === telaAtiva && !forcarReload) return;
 
     const caminho = telas[tela];
 
