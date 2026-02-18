@@ -11,7 +11,7 @@
     <header>
         <div class="titulos">
             <h1>Importação / Exportação de Dados</h1>
-            <p>Gerencie seus dados de profissionais e documentos em massa</span>
+            <p>Gerencie seus dados de profissionais e documentos em massa.</p>
         </div>
     </header>
 
@@ -29,7 +29,7 @@
                 <h3>Importar Dados</h3>
             </div>
 
-            <p class="card-descricao">Faça upload dos dados dos profissionais e documentos usando um único CSV</p>
+            <p class="card-descricao">Faça upload dos dados dos profissionais e documentos usando um único CSV.</p>
 
             <div class="campo">
             <label>Selecione o arquivo CSV</label>
@@ -61,7 +61,7 @@
                 </svg>
                 <h3>Exportar Dados</h3>
             </div>
-            <p class="card-descricao">Gere um arquivo CSV com seus dados cadastrados</p>
+            <p class="card-descricao">Gere um arquivo CSV com seus dados cadastrados.</p>
 
             <div class="alert-info">
             <p><strong>Nota:</strong> Os arquivos CSV podem ser abertos no Excel para análise ou edição.</p>
@@ -74,7 +74,7 @@
 
     <script>
         function updateFileName(input) {
-            const fileName = input.files[0] || 'Nenhum arquivo escolhido';
+            const fileName = input.files[0]?.name || 'Nenhum arquivo escolhido';
             const fileNameSpan = input.parentElement.querySelector('.file-name');
             fileNameSpan.textContent = fileName;
         }

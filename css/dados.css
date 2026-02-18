@@ -92,9 +92,8 @@ header {
 
 .titulos h1 {
   font-size: 28px;
-  font-weight: 600;
-  color: var(--sidebar-color);
-  margin-bottom: 6px;
+  color: #003366;
+  margin-bottom: 8px;
 }
 
 .titulos p {
@@ -231,12 +230,7 @@ header {
     font-weight: 600;
 }
 
-.texto-secundario {
-  font-size: 13px;
-    color: #666;
-    line-height: 1.6;
-    margin: 16px 0;
-  }
+
   
   /*************Botões*****************/
   .btn-primary {
@@ -256,7 +250,7 @@ header {
 
   .btn-primary:hover {
   background-color: #0052a3;
-  transform: translate(-1px);
+  transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
 }
 
