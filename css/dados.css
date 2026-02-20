@@ -106,22 +106,22 @@ header {
 .cards-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 32px;  /* ← Aumentar o espaço entre os cards */
+    gap: 32px;  
     padding: 0 40px 40px 40px;
     max-width: 1400px;
-    align-items: start;  /* ← Cards começam no topo */
+    align-items: start;
 }
 
 .card-import,
 .card-export {
     background: white;
     border-radius: 12px;
-    padding: 28px;  /* ← Aumentar padding interno */
+    padding: 28px; 
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     border: 1px solid #E0E0E0;
     display: flex;
-    flex-direction: column;  /* ← Organiza conteúdo em coluna */
-    min-height: 450px;  /* ← Altura mínima igual para ambos */
+    flex-direction: column; 
+    min-height: 450px;
 }
 
 .card-header{
@@ -243,7 +243,7 @@ header {
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
-    margin-top: auto;  /* ← ISSO empurra o botão pro final! */
+    margin-top: auto;
     transition: all 0.3s ease;
 
   }
