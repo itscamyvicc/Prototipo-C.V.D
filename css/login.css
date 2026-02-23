@@ -1,1 +1,319 @@
-a
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-color: #E4E9F7;
+    --sidebar-color: #003366;
+    --primary-color: #1755a0;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #F8F9FA;
+    --secondary-color-light: rgba(132, 139, 200, 0.18);
+
+    /* --- Cores de Notificação --- */
+    --color-danger: #ff7782;
+    --color-sucess: #41f1b6;
+    --color-warning: #ffbb55;
+
+    /* --- Sombra da Caixa --- */
+    --box-shadow: 0 2rem 3rem var(--secondary-color-light);
+
+    /* --- Animação de Transição --- */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+
+.danger {
+    color: var(--color-danger);
+}
+
+.sucess {
+    color: var(--color-sucess);
+}
+
+.warning {
+    color: var(--color-warning);
+}
+
+/* -------------- Menu -------------- */
+body {
+    height: 100vh;
+    background: var(--body-color);
+
+}
+
+@media (max-width: 768px) {
+    body {
+        margin-left: 0;
+        margin-top: 150px; 
+    }
+}
+
+/********** Container Principal ***********/
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+
+/*************** Branding *************/
+
+.lado-esquerdo {
+    background: #003366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.logo-container {
+    text-align: center;
+    color: white;
+}
+
+.logo {
+    margin-bottom: 24px;
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+    border-radius: 8px;
+}
+
+.logo-container h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+}
+
+.logo-container p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+    opacity: 0.9;
+
+}
+
+/********* Lado Direito ***********/
+
+.lado-direito {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 420px;
+}
+
+/********** Botão Voltar ***********/
+
+.btn-voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 32px;
+    transition: all 0.3s ease;
+}
+
+.btn-voltar:hover{
+    color: #003366;
+}
+
+
+/********** Header do Formulário **********/
+
+.form-header {
+    margin-bottom: 32px;
+}
+
+.form-header h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.form-header p {
+    font-size: 14px;
+    color: #666;
+}
+
+/*********** Botão Google *************/
+
+.btn-google {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 24px;
+    background: white;
+    border: 1px solid #666;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--box-shadow);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 24px;
+}
+
+.btn-google:hover {
+    background: #F8F9FA;
+    border: #cccccc;
+}
+
+/********** Divisor OU ********/
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 24px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--box-shadow);
+}
+
+.divider span {
+    padding: 0 16px;
+    font-size: 13px;
+    color: #666;
+    font-weight: 500;
+}
+
+/********* Formulário **********/
+
+form {
+    margin-bottom: 24px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 14px;
+    border: 1px solid var(#666);
+    border-radius: 8px;
+    background: white;
+    color: #000;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.input-group input::placeholder {
+    color: #aaaaaa;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #003366;
+    box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.1);
+}
+
+/********* Botão Principal **********/
+
+.btn-primary {
+    width: 100%;
+    padding: 12px 24px;
+    background: #003366;
+    margin: 10px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-primary:hover {
+    background: #003366;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 51, 102, 0.3);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/********* Link de Cadastro ***********/
+
+.link-cadastro {
+    text-align: center;
+    font-size: 14px;
+    color: #000;
+}
+
+.link-cadastro a {
+    color: #003366;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.link-cadastro a:hover {
+    text-decoration: underline;
+}
+
+/********* Responsivo *********/
+@media (max-width: 968px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+.lado-esquerdo {
+    display: none;
+}
+
+.lado-direito {
+    padding: 24px 16px;
+}
+
+.form-container {
+    max-width: 100%;
+}
+
+}
+
+@media (max-width: 480px) {
+    .form-header h2 {
+        font-size: 24px ;
+    }
+
+    .btn-google,
+    .btn-primary {
+        padding: 14px 20px;
+    }
+}
