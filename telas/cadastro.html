@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - CVD</title>
+    <link rel="stylesheet" href="/css/login_cadastro.css">
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="lado-esquerdo">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="/imagens/logo.jpg" alt="logo CVD">
+                </div>
+                <h1>CVD</h1>
+                <p>Controle de Validade<br>Documental</p>
+            </div>
+        </div>
+
+        
+        <div class="lado-direito">
+            <div class="form-container">
+                <!-- Botão Voltar -->
+                <a href="login.html" class="btn-voltar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                    </svg>
+                    Voltar
+                </a>
+
+                <div class="form-header">
+                    <h2>Crie sua conta</h2>
+                </div>
+
+                
+                <form>
+                    <div class="input-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="seuemail@exemplo.com" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" placeholder="Seu nome completo" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" placeholder="••••••••" required>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Criar Conta</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

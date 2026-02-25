@@ -150,6 +150,25 @@ header {
   line-height: 1.5;
 }
 
+.card-import:hover{
+  transform: translateY(2px);
+  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.3);
+}
+
+.card-import:active{
+  transform: translateY(1);
+}
+
+.card-export:hover{
+  transform: translateY(2px);
+  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.3);
+}
+
+.card-export:active{
+  transform: translateY(1);
+}
+
+
 
 /*************Campo*************/
 

@@ -109,16 +109,28 @@ body {
 /********* Lado Direito ***********/
 
 .lado-direito {
-    background: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px;
+    padding: 60px 40px
 }
 
 .form-container {
+    background: #fff;
+    border-radius: 12px;
+    padding: 0 40px 40px 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     width: 100%;
-    max-width: 420px;
+    max-width: 410px;
+}
+
+.form-container:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.3);
+}
+
+.form-container:active{
+  transform: translateY(2);
 }
 
 /********** Botão Voltar ***********/
@@ -142,19 +154,19 @@ body {
 /********** Header do Formulário **********/
 
 .form-header {
+    text-align: center;
+    color: #003366;
     margin-bottom: 32px;
 }
 
 .form-header h2 {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 600;
-    color: #000;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
 
 .form-header p {
-    font-size: 14px;
-    color: #666;
+    font-size: 13px;
 }
 
 /*********** Botão Google *************/
@@ -164,22 +176,23 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
-    padding: 12px 24px;
+    gap: 10px;
+    padding: 10px 20px;
     background: white;
-    border: 1px solid #666;
+    border: 1px solid #003366;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
-    color: var(--box-shadow);
+    color: #003366;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 
 .btn-google:hover {
-    background: #F8F9FA;
-    border: #cccccc;
+    background: #003366;
+    color: #fff;
+    border: #003366;
 }
 
 /********** Divisor OU ********/
@@ -187,7 +200,7 @@ body {
 .divider {
     display: flex;
     align-items: center;
-    margin: 24px 0;
+    margin: 20px 0;
 }
 
 .divider::before,
@@ -199,30 +212,36 @@ body {
 }
 
 .divider span {
-    padding: 0 16px;
-    font-size: 13px;
-    color: #666;
+    padding: 0 12px;
+    font-size: 12px;
+    color: #003366;
     font-weight: 500;
 }
 
 /********* Formulário **********/
 
 form {
-    margin-bottom: 24px;
+    background: #fff;
+    margin-bottom: 20px;
 }
+
+.input-group{
+    margin-bottom: 16px;
+}
+
 
 .input-group label {
     display: block;
-    font-size: 14px;
-    font-weight: 500;
-    color: #000;
-    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #003366;
+    margin-bottom: 6px;
 }
 
 .input-group input {
     width: 100%;
-    padding: 12px 16px;
-    font-size: 14px;
+    padding: 10px 14px;
+    font-size: 13px;
     border: 1px solid var(#666);
     border-radius: 8px;
     background: white;
@@ -245,7 +264,7 @@ form {
 
 .btn-primary {
     width: 100%;
-    padding: 12px 24px;
+    padding: 11px 24px;
     background: #003366;
     margin: 10px;
     color: white;
@@ -272,8 +291,10 @@ form {
 
 .link-cadastro {
     text-align: center;
-    font-size: 14px;
-    color: #000;
+    font-size: 13px;
+    font-weight: 600;
+    color: #003366;
+    margin-bottom: 20px;
 }
 
 .link-cadastro a {

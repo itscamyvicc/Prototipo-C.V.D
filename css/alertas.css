@@ -108,6 +108,15 @@ main{
     margin-bottom: 24px;
 }
 
+.filtros-container:hover {
+    transform: translateX(2px);
+    box-shadow: 0 4px 12px rgba(0, 51, 102, 0.3);
+}
+
+.filtros-container:active {
+    transform: translateY(1);
+}
+
 .filtro-item {
     display: flex;
     align-items: center;
@@ -180,4 +189,13 @@ main{
     font-size: 14px;
     color: #666;
     line-height: 1.5;
+}
+
+.alerta-vazio:hover {
+    transform: translateX(2px);
+    box-shadow: 0 4px 12px rgba(0, 51, 102, 0.3);
+}
+
+.alerta-vazio:active {
+    transform: translateY(1);
 }
