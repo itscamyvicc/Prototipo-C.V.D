@@ -18,49 +18,52 @@
             <p> Gerencie o cadastro de profissinais. </p>
         </div>
         <button class="btn-novo">
-            <i class='bx bx-plus'></i> Novo Documento
+            <i class='bx bx-plus'></i> Novo Profissional
         </button>
     </div>
 
     <!-- TABELA DE CADASTRO -->
     <div class="tabela_primaria">
-        <header>Novo Profissional</header>
+        <div class="header-container">
+            <header>Novo Profissional</header>
+            <i class='bx bx-x close-icon'></i>
+        </div>
+        
 
-        <form action="#">
+        <form action="#"> 
             <div class="details">
-                <span class="title">Cadastre suas informações:</span>
 
                 <div class="fields">
                     <div class="input-field">
-                        <label>Nome Completo</label>
+                        <label>Nome Completo <span class="obrigatorio">*</span></label>
                         <input type="text" placeholder="Seu nome completo" required>
                     </div>
                     <div class="input-field">
-                        <label>CPF</label>
+                        <label>CPF <span class="obrigatorio">*</span></label>
                         <input type="text" id="cpf" maxlength="14" placeholder="000.000.000-00" required>
                     </div>
                     <div class="input-field">
-                        <label>Cargo</label>
+                        <label>Cargo <span class="obrigatorio">*</span></label>
                         <input type="text" placeholder="Ex: Médico" required>
                     </div>
                     <div class="input-field">
                         <label>Setor</label>
-                        <input type="text" placeholder="Ex: UTI, Pediatria" required>
+                        <input type="text" placeholder="Ex: UTI, Pediatria">
                     </div>
                     <div class="input-field">
                         <label>E-mail</label>
-                        <input type="text" placeholder="seuemail@gmail.com" required>
+                        <input type="text" placeholder="seuemail@gmail.com">
                     </div>
                     <div class="input-field">
                         <label>Telefone</label>
-                        <input type="text" id="telefone" maxlength="15" placeholder="(00) 00000-0000" required>
+                        <input type="text" id="telefone" maxlength="15" placeholder="(00) 00000-0000">
                     </div>
                     <div class="input-field">
                         <label>Data de Admissão</label>
-                        <input type="date" required>
+                        <input type="date">
                     </div>
                     <div class="input-field">
-                        <label>Status</label>
+                        <label>Status <span class="obrigatorio">*</span></label>
                         <select required>
                             <option value="" disabled selected>Selecione o status</option>
                             <option value="ativo">Ativo</option>
@@ -71,7 +74,6 @@
                         </select>
                     </div>
                 </div>
-
                 <button class="button" type="submit">Cadastrar</button>
             </div>
         </form>
@@ -100,12 +102,12 @@
 
             <!-- CARDS -->
             <div class="card-profissional">
-                <div class="avatar">C</div>
+                <div class="avatar"> C </div>
 
                 <div class="info">
                     <div class="top-info">
                         <h3>Carlos Eduardo Santos</h3>
-                        <i class='bx bx-pencil edit-icon'></i>
+                        <i class='bx bx-edit edit-icon'></i>
                     </div>
 
                     <div class="badges">
@@ -117,8 +119,8 @@
                         </span>
                     </div>
 
-                    <p><i class='bx bx-envelope'></i> carlos.santos@hospital.com</p>
-                    <p><i class='bx bx-phone'></i> (00) 00000-0000</p>
+                    <p><i class='bx bx-envelope'></i> carlos.santos@hospital.com </p>
+                    <p><i class='bx bx-phone'></i> (00) 00000-0000 </p>
                 </div>
             </div>
 
