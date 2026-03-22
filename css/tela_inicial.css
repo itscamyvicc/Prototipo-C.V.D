@@ -8,7 +8,6 @@
 }
 
 :root {
-    --body-color: #E4E9F7;
     --sidebar-color: #003366;
     --primary-color: #124b92;
     --secondary-color-light: rgba(132, 139, 200, 0.18);
@@ -38,7 +37,7 @@ body {
     z-index: 100;
     transition: var(--tran-03);
     overflow-y: auto;
-}
+}   
 
 /* -------------- Header da Sidebar -------------- */
 .sidebar header {
@@ -53,8 +52,8 @@ body {
 }
 
 .image img {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 50px;
     border-radius: 10px;
     object-fit: cover;
 }
@@ -130,7 +129,7 @@ body {
     height: 100vh;
     overflow-y: auto;
     padding: 40px 60px;
-    background: var(--body-color);
+    background-color: #f2f2f2;
     transition: var(--tran-03);
 }
 

@@ -23,7 +23,10 @@
 
     <!-- TABELA DE CADASTRO -->
     <div class="tabela_primaria">
-        <header>Novo Documento</header>
+        <div class="header-container">
+            <header>Novo Documento</header>
+            <i class='bx bx-x close-icon'></i>
+        </div>
 
         <form action="#" id="formDocumento">
             <div class="details">
@@ -32,19 +35,13 @@
                     <!-- Linha 1: Profissional (campo largo) -->
                     <div class="input-field full-width">
                         <label>Profissional <span class="obrigatorio">*</span></label>
-                        <select id="profissional" required>
-                            <option value="" disabled selected></option>
-                            <option value="carlos">Carlos Eduardo Santos</option>
-                            <option value="ana">Ana Paula Oliveira</option>
-                            <option value="marcos">Marcos Vinícius Lima</option>
-                        </select>
+                        <input type="text" id="profissional" placeholder="">
                     </div>
 
                     <!-- Linha 2: Tipo de Documento + Número do Documento -->
                     <div class="input-field">
                         <label>Tipo de Documento <span class="obrigatorio">*</span></label>
-                        <select id="tipo-documento" required>
-                            <option value="" disabled selected></option>
+                        <select id="tipo-documento" placeholder="COREN" required>
                             <option value="coren">COREN</option>
                             <option value="crm">CRM</option>
                             <option value="crf">CRF</option>

@@ -8,7 +8,7 @@
     --color-danger: #ff7782;
     --color-sucess: #41f1b6;
     --color-warning: #ffbb55;
-    --box-shadow: 0 2rem 3rem var(--secondary-color-light);
+    --box-shadow: 0 1.2rem 0.7rem var(--secondary-color-light);
     --tran-03: all 0.3s ease;
 }
 
@@ -22,7 +22,6 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-bottom: 25px;
 }
 
 .page-header-left h1 {
@@ -75,6 +74,19 @@
     color: #003366;
 }
 
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-icon {
+    font-size: 37px;
+    color: #555;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+
 /* -------------- Formulário -------------- */
 .tabela_primaria form {
     position: relative;
@@ -108,8 +120,8 @@ form .fields .input-field {
 
 .input-field label {
     font-size: 12px;
-    font-weight: 500;
-    color: #333;
+    font-weight: 700;
+    color: #003366;
 }
 
 .input-field input,
@@ -126,12 +138,7 @@ form .fields .input-field {
     width: 93%;
 }
 
-.input-field input:is(:focus, :valid) {
-    box-shadow: 0 3px 6px rgba(132, 139, 200, 0.18);
-}
-
 .input-field input[type="date"] { color: #707070; }
-.input-field input[type="date"]:valid { color: #333; }
 
 .tabela_primaria form button {
     display: flex;
@@ -191,13 +198,14 @@ form .fields .input-field {
     border: none;
     outline: none;
     flex: 1;
+    padding: 5px;
 }
 
 .filtro select {
     height: 40px;
     border-radius: 8px;
     border: 1px solid #555;
-    padding: 0 10px;
+    padding: 0 15px;
     background: #fff;
 }
 
@@ -213,17 +221,23 @@ form .fields .input-field {
     margin-bottom: 15px;
 }
 
+.card-profissional .info h3 {
+    font-weight: 550;
+    color: #003366;
+
+}
+
 .avatar {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background: #0d47a1;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
-    font-size: 20px;
+    font-weight: 500;
+    font-size: 30px;
 }
 
 .top-info {
@@ -233,7 +247,7 @@ form .fields .input-field {
 }
 
 .edit-icon {
-    font-size: 20px;
+    font-size: 25px;
     cursor: pointer;
     color: #0d47a1;
 }
@@ -256,7 +270,7 @@ form .fields .input-field {
 
 .card-profissional p {
     margin: 3px 0;
-    font-size: 14px;
+    font-size: 13px;
     color: #555;
 }
 
