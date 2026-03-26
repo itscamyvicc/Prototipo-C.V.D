@@ -8,17 +8,17 @@
 </head>
 
 <body>
-    <header>
+     <header> <!--   Início do Cabeçalho -->
         <div class="titulos">
             <h1>Central de Alertas</h1>
             <p>Notificações e Avisos de Vencimentos</p>
         </div>
         <div class="badge-pendentes">0 Pendentes</div>
-    </header>
+    </header> <!--   Fim do Cabeçalho -->
 
-    <main>
+    <main> <!--   Início do Conteúdo -->
         <div class="filtros-container">
-            <div class="filtro-item">
+            <div class="filtro-item"> <!--  Início Filtro  -->
                 <svg xmlns="http://www.w3.org/2000/svg"  width="24" height="24"
                     fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
                     <path
@@ -37,9 +37,9 @@
                 <option>Visualizados</option>
                 <option>Todos</option>
             </select>
-        </div>
+        </div> <!--  Fim Filtro  -->
 
-        <div class="alerta-vazio">
+        <div class="alerta-vazio"> <!--  Início Alerta  -->
             <div class="icone-check">
                 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor"
                     class="bi bi-check-circle" viewBox="0 0 16 16">
@@ -50,9 +50,42 @@
             </div>
             <h2>Nenhum Alerta Encontrado</h2>
             <p>Todos os alertas foram visualizados!</p>
-        </div>
-    </main>
+        </div> <!--  Fim Alerta  -->
+    </main> <!--   Fim do Conteúdo -->
 
+    <script>
+        // 1. Escutar alertas em tempo real
+useEffect(() => {
+  const q = query(
+    collection(db, "alertas"),
+    where("visualizado", "==", false),
+    orderBy("dataVencimento", "asc")
+  );
+
+  const unsubscribe = onSnapshot(q, (snapshot) => {
+    const alertas = snapshot.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data()
+    }));
+    setAlertas(alertas);
+  });
+
+  return () => unsubscribe(); // limpa o listener
+}, []);
+
+// 2. Marcar como visualizado
+const marcarVisualizado = async (alertaId) => {
+  await updateDoc(doc(db, "alertas", alertaId), {
+    visualizado: true,
+    visualizadoEm: new Date()
+  });
+};
+
+// 3. Filtros locais
+const alertasFiltrados = alertas
+  .filter(a => filtroPrioridade === "todas" || a.prioridade === filtroPrioridade)
+  .filter(a => filtroStatus === "nao_visualizados" ? !a.visualizado : true);
+    </script>
 
 </body>
 
