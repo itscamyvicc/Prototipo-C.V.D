@@ -8,7 +8,7 @@
 </head>
 
 <body>
-     <header> <!-- Início Cabeçalho -->
+    <header> <!-- Início Cabeçalho -->
         <div class="titulos">
             <h1>Importação / Exportação de Dados</h1>
             <p>Gerencie seus dados de profissionais e documentos em massa.</p>
@@ -19,8 +19,8 @@
         <!-- Início Card Importar -->
         <div class="card-import">
             <div class="card-header">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#003366"
-                    class="bi bi-box-arrow-up" viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#003366" class="bi bi-box-arrow-up"
+                    viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                         d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1z" />
                     <path fill-rule="evenodd"
@@ -32,28 +32,28 @@
             <p class="card-descricao">Faça upload dos dados dos profissionais e documentos usando um único CSV.</p>
 
             <div class="campo">
-            <label>Selecione o arquivo CSV</label>
-            <div class="file-input-wrapper">
-                <button type="button" class="btn-select-file" onclick="document.getElementById('arquivo').click()">
-                    <span>Escolher Arquivo</span>
-                    <span class="file-name">Nenhum arquivo escolhido</span>
-                </button>
-                <input type="file" id="arquivo" accept=".csv" hidden onchange="updateFileName(this)">
+                <label>Selecione o arquivo CSV</label>
+                <div class="file-input-wrapper">
+                    <button type="button" class="btn-select-file" onclick="document.getElementById('arquivo').click()">
+                        <span>Escolher Arquivo</span>
+                        <span class="file-name">Nenhum arquivo escolhido</span>
+                    </button>
+                    <input type="file" id="arquivo" accept=".csv" hidden onchange="updateFileName(this)">
+                </div>
             </div>
-        </div>
 
             <div class="nota-info">
                 <span>Formato esperado: Arquivo CSV com colunas de profissionais e documentos.</span>
             </div>
 
             <button class="btn-primary">Importar Arquivo</button>
-        </div> 
-    <!-- Fim Card Importar -->
-        
+        </div>
+        <!-- Fim Card Importar -->
+
         <div class="card-export"><!-- Início Card Exportar  -->
             <div class="card-header">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#003366"
-                    class="bi bi-download" viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#003366" class="bi bi-download"
+                    viewBox="0 0 16 16">
                     <path
                         d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
                     <path
@@ -64,7 +64,7 @@
             <p class="card-descricao">Gere um arquivo CSV com seus dados cadastrados.</p>
 
             <div class="alert-info">
-            <p><strong>Nota:</strong> Os arquivos CSV podem ser abertos no Excel para análise ou edição.</p>
+                <p><strong>Nota:</strong> Os arquivos CSV podem ser abertos no Excel para análise ou edição.</p>
             </div>
             <p class="nota-info">O arquivo CSV gerado pode ser usado em sistemas externos ou para auditoria de
                 dados.</p>
