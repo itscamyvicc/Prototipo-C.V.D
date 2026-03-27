@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-color: #E4E9F7;
+    --sidebar-color: #003366;
+    --primary-color: #1755a0;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #F8F9FA;
+    --secondary-color-light: rgba(132, 139, 200, 0.18);
+
+    /* --- Cores de Notificação --- */
+    --color-danger: #ff7782;
+    --color-sucess: #41f1b6;
+    --color-warning: #ffbb55;
+
+    /* --- Sombra da Caixa --- */
+    --box-shadow: 0 2rem 3rem var(--secondary-color-light);
+
+    /* --- Animação de Transição --- */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+
+.danger {
+    color: var(--color-danger);
+}
+
+.sucess {
+    color: var(--color-sucess);
+}
+
+.warning {
+    color: var(--color-warning);
+}
+
+/* -------------- Menu -------------- */
+body {
+    height: 100vh;
+    background: var(--body-color);
+    margin-left: 250px; 
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    body {
+        margin-left: 0;
+        margin-top: 150px; 
+    }
+}
+
+/*--------------titulos------------*/
+
+header{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 32px 40px 24px ;
+}
+
+.titulos h1 {
+    font-size: 28px;
+    color: #003366;
+    margin-bottom: 8px;
+}
+
+.titulos p {
+    font-size: 14px;
+    color: #666;
+}
+
+/********** Badge Pendentes ************/
+.badge-pendentes{
+  background-color: #fff3e0 ;
+  color: red; 
+  border: 1px solid #fff3e0;
+  border-radius: 20px;
+  padding: 6px 16px; 
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/************** Main ****************/
+main{
+    padding: 0 40px 40px 40px;
+    max-width: 1400;
+}
+
+/* ----------- Filtro de Alertas -----------*/
+.filtros-container{
+    background-color: #fff;
+    padding: 16px 20px;
+    border-radius: 6px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.filtros-container:hover {
+    transform: translateX(2px);
+    box-shadow: 0 4px 12px rgba(0, 51, 102, 0.3);
+}
+
+.filtros-container:active {
+    transform: translateY(1);
+}
+
+.filtro-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filtro-item svg{
+    color: #666;
+    flex-shrink: 0;
+}
+
+.filtro {
+    padding: 8px 12px;
+    border: 1px solid #666;
+    border-radius: 6px;
+    background: #fff;
+    color: #000;
+    font-size: 14px;
+    cursor: pointer;
+    transition: var(--tran-03);
+    font-family: 'Poppins', sans-serif;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 36px;
+}
+
+.filtro:hover {
+    border-color: var(--primary-color);
+}
+
+.filtro:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+/*------- Contagem de Alertas---------*/
+
+.alerta-vazio{
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.icone-check{
+    margin-bottom: 24px;
+}
+
+.icone-check svg {
+    color: #0cf145;
+}
+
+.alerta-vazio h2{
+    font-size: 20px;
+    font-weight: 600;
+    color: #003366;
+    margin-bottom: 8px;
+}
+
+.alerta-vazio p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.alerta-vazio:hover {
+    transform: translateX(2px);
+    box-shadow: 0 4px 12px rgba(0, 51, 102, 0.3);
+}
+
+.alerta-vazio:active {
+    transform: translateY(1);
+}
