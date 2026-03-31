@@ -10,8 +10,8 @@ const telas = {
     profissionais:  '/telas/profissionais.html',
     documentos:     '/telas/documentos.html',
     alertas:        '/telas/alertas.html',
-    dados:          '/telas/dados.html',
-    configuracoes:  '/telas/config.html',  
+    importar_exportar:          '/telas/dados.html',
+    config:  '/telas/config.html',  
 };
 
 // CSS específico de cada tela (carregados dinamicamente)
@@ -20,8 +20,8 @@ const cssTelas = {
     profissionais:  '/css/profissionais.css',
     documentos:     '/css/documentos.css',
     alertas:        '/css/alertas.css',
-    dados:          '/css/dados.css',
-    configuracoes:  '/css/config.css',
+    importar_exportar:          '/css/dados.css',
+    config:  '/css/config.css',
 };
 
 // CSS já carregados (evita duplicatas)
@@ -33,17 +33,21 @@ let telaAtiva = null;
 // -----------------------------------------------
 //  Carrega o CSS de uma tela dinamicamente
 // -----------------------------------------------
+let cssAtivo = null; // troca essa linha: const cssCarregados = new Set();
+
 function carregarCSS(tela) {
     const href = cssTelas[tela];
-    if (!href || cssCarregados.has(href)) return;
+    if (!href) return;
+
+    // Remove o CSS anterior
+    if (cssAtivo) cssAtivo.remove();
 
     const link = document.createElement('link');
     link.rel = 'stylesheet';
     link.href = href;
     document.head.appendChild(link);
-    cssCarregados.add(href);
+    cssAtivo = link;
 }
-
 // -----------------------------------------------
 //  Carrega o HTML de uma tela via fetch
 // -----------------------------------------------
