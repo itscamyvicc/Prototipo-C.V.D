@@ -102,10 +102,27 @@
         </div>
 
         <div class="button-container">
-            <button class="btn-salvar">Salvar Configurações</button>
+            <button id="btn-salvar">Salvar Configurações</button>
         </div>
 
     </main> <!--Fim Conteúdo-->
+
+    <script>
+      document.getElementById('btn-salvar').addEventListener('click', function() {
+    const btn = document.getElementById('btn-salvar');
+
+    // Feedback visual
+    btn.textContent = '✓ Salvo!';
+    btn.classList.add('salvo');
+    btn.disabled = true;
+
+    setTimeout(() => {
+        btn.textContent = 'Salvar Configurações';
+        btn.classList.remove('salvo');
+        btn.disabled = false;
+    }, 2000);
+});
+    </script>
 
 </body>
 
