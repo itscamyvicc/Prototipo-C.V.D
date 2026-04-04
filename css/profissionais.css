@@ -34,6 +34,7 @@
     font-size: 13px;
     color: #777;
     margin-top: 2px;
+    margin-bottom: 25px;
 }
 
 .btn-novo {
@@ -46,32 +47,28 @@
     outline: none;
     color: #fff;
     border-radius: 5px;
-    background-color: #124b92;
+    background: linear-gradient(to right, #015cb9, #013973);
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
-    transition: var(--tran-03);
-}
-
-.btn-novo:hover {
-    background-color: #003366;
+    margin-bottom: 25px;
 }
 
 /* -------------- Cadastro de Profissional -------------- */
 .tabela_primaria {
-    position: relative;
     width: 100%;
-    background-color: #FFF;
+    background-color: #fff;
     border-radius: 15px;
     padding: 30px;
+    margin-bottom: 40px;
     box-shadow: var(--box-shadow);
-    margin-bottom: 30px;
 }
 
 .tabela_primaria header {
     font-size: 20px;
     font-weight: 600;
     color: #003366;
+    margin-bottom: 20px;
 }
 
 .header-container {
@@ -135,12 +132,13 @@ form .fields .input-field {
     padding: 0 15px;
     height: 35px;
     margin: 8px 0;
-    width: 93%;
+    width: 100%;
+    box-shadow: none;
 }
 
 .input-field input[type="date"] { color: #707070; }
 
-.tabela_primaria form button {
+.tabela_primaria form .btn-cadastrar {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -151,15 +149,31 @@ form .fields .input-field {
     outline: none;
     color: #FFF;
     border-radius: 5px;
-    margin: 25px 0;
-    background-color: #124b92;
-    transition: var(--tran-03);
+    background: linear-gradient(to right, #015cb9, #013973);
     cursor: pointer;
     font-size: 14px;
 }
 
-.tabela_primaria button:hover {
-    background-color: #003366;
+.tabela_primaria form .btn-cancelar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    color: #003366;
+    border-radius: 5px;
+    border: solid #003366;
+    background-color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin: 25px 0;
 }
 
 /* -------------- Lista de Profissionais -------------- */

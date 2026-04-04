@@ -24,20 +24,11 @@
     --tran-05: all 0.5s ease;
 }
 
-.danger {
-    color: var(--color-danger);
-}
-
-.sucess {
-    color: var(--color-sucess);
-}
-
-.warning {
-    color: var(--color-warning);
-}
+.danger  { color: var(--color-danger); }
+.sucess  { color: var(--color-sucess); }
+.warning { color: var(--color-warning); }
 
 /* -------------- Menu -------------- */
-
 
 @media (max-width: 768px) {
     body {
@@ -48,22 +39,24 @@
 
 /*--------------titulos------------*/
 
-header{
-  display: flex;
-  justify-content: space-between; 
-  align-items: center;
-  padding: 32px 0px 24px ;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 .titulos h1 {
-    font-size: 28px;
+    font-size: 24px;
+    font-weight: 700;
     color: #003366;
-    margin-bottom: 8px;
 }
 
 .titulos p {
     font-size: 14px;
     color: #666;
+    margin-bottom: 15px;
 }
 
 /********** Badge Pendentes ************/
@@ -76,12 +69,6 @@ header{
   font-size: 13px;
   font-weight: 500;
   white-space: nowrap;
-}
-
-/************** Main ****************/
-main{
-    padding: 0 0 40px 0;
-    max-width: 1400px;
 }
 
 /* ----------- Filtro de Alertas -----------*/
@@ -160,7 +147,7 @@ main{
 }
 
 .icone-check svg {
-    color: #0cf145;
+    color: #2e7d32;
 }
 
 .alerta-vazio h2{

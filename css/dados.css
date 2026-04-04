@@ -72,20 +72,23 @@
 /*----------Titulo------------*/
 
 header {
-  padding: 32px 0 0 0;
-  margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 
 .titulos h1 {
   font-size: 28px;
   color: #003366;
-  margin-bottom: 8px;
 }
 
 .titulos p {
   font-size: 14px;
   color: #666;
+  margin-bottom: 20px;
 }
 
 /*-------------Cards-------------*/
@@ -127,35 +130,14 @@ header {
   font-size: 18px;
   font-weight: 600;
   color: #003366;
-  margin: 0;
 }
 
-.card-descricao{
+.card-descricao {
   font-size: 17px;
   color: #666;
-  margin-bottom: 10px;
-  line-height: 1.5;
+  margin-bottom: 15px;
+  margin-top: 10px;
 }
-
-.card-import:hover{
-  transform: translateY(2px);
-  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.3);
-}
-
-.card-import:active{
-  transform: translateY(1);
-}
-
-.card-export:hover{
-  transform: translateY(2px);
-  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.3);
-}
-
-.card-export:active{
-  transform: translateY(1);
-}
-
-
 
 /*************Campo*************/
 
@@ -164,18 +146,17 @@ header {
 }
 
 .campo label {
-  display: block;
-    font-size: 14px;
-    font-weight: 400;
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
     color: #003366;
-    margin-bottom: 8px;
+    margin-bottom: 25px;
 }
 
 .campo span{
   color: #003366;
 }
 /***********Input de Arquivo****************/
-
 
 .file-input-wrapper{
   position: relative;
@@ -201,7 +182,7 @@ header {
 
   .btn-select-file:hover {
     border-color: #0066cc;
-  background: #F8F9FA;
+    background: #F8F9FA;
 }
 
 .file-name {
@@ -211,8 +192,8 @@ header {
 
 /*************Caixas de Nota***************/
 .nota-info {
-    background-color: #E8F4F8;
-    border-left: 4px solid #0066CC;
+    background-color: #f2f2f2;
+    border-left: 4px solid #1e4b78;
     padding: 16px;
     border-radius: 8px;
     font-size: 13px;
@@ -221,8 +202,8 @@ header {
 }
 
 .alert-info {
-  background-color: #E3F2FD;
-  border-left: 4px solid #2196F3;
+  background-color: #f2f2f2;
+  border-left: 4px solid #1e4b78;
   padding: 16px;
   border-radius: 8px;
     margin: 25px 0;
@@ -236,12 +217,10 @@ header {
     font-weight: 600;
 }
 
-
-  
   /*************Botões*****************/
   .btn-primary {
     width: 100%;
-    background-color: #0066CC;
+    background: linear-gradient(to right, #015cb9, #013973);
     color: white;
     border: none;
     padding: 14px 24px;
@@ -256,10 +235,4 @@ header {
 
   .btn-primary:hover {
   background-color: #0052a3;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
-}
-
-.btn-primary:active {
-  transform: translateY(0);
 }
