@@ -15,7 +15,7 @@
     --color-warning: #ffbb55;
 
     /* --- Sombra da Caixa --- */
-    --box-shadow: 0 2rem 3rem var(--secondary-color-light);
+    --box-shadow: 0 1.2rem 0.7rem var(--secondary-color-light);
 
     /* --- Animação de Transição --- */
     --tran-03: all 0.2s ease;
@@ -28,23 +28,12 @@
 .sucess  { color: var(--color-sucess); }
 .warning { color: var(--color-warning); }
 
-/* -------------- Menu -------------- */
-
-@media (max-width: 768px) {
-    body {
-        margin-left: 0;
-        margin-top: 150px; 
-    }
-}
-
 /*--------------titulos------------*/
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    margin-bottom: 10px;
 }
 
 .titulos h1 {
@@ -61,9 +50,9 @@ header {
 
 /********** Badge Pendentes ************/
 .badge-pendentes{
-  background-color: #fff3e0 ;
-  color: red; 
-  border: 1px solid #fff3e0;
+  background-color: #fee2e2 ;
+  color: #dc2626; 
+  border: 1px solid #dc2626;
   border-radius: 20px;
   padding: 6px 16px; 
   font-size: 13px;
@@ -81,9 +70,8 @@ header {
     align-items: center;
     gap: 16px;
     margin-bottom: 24px;
+    margin-top: 15px;
 }
-
-
 
 .filtros-container:active {
     transform: translateY(1);
@@ -162,8 +150,6 @@ header {
     color: #666;
     line-height: 1.5;
 }
-
-
 
 .alerta-vazio:active {
     transform: translateY(1);

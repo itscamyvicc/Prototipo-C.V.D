@@ -27,7 +27,6 @@
             <header>Novo Documento</header>
             <i class='bx bx-x close-icon'></i>
         </div>
-
         <form action="#" id="formDocumento">
             <div class="details">
 
@@ -35,7 +34,7 @@
                     <!-- Linha 1: Profissional (campo largo) -->
                     <div class="input-field full-width">
                         <label>Profissional <span class="obrigatorio">*</span></label>
-                        <input type="text" id="profissional" placeholder="">
+                        <input type="text" id="profissional" placeholder="" required>
                     </div>
 
                     <!-- Linha 2: Tipo de Documento + Número do Documento -->
@@ -75,7 +74,7 @@
                     </div>
                 </div>
                 <div class="form-actions">
-                <button class="button btn-cancelar" type="button">Cancelar</button>
+                <button class="button btn-cancelar" type="reset">Cancelar</button>
                 <button class="button btn-cadastrar" type="submit">Cadastrar</button>
                 </div>
             </div>

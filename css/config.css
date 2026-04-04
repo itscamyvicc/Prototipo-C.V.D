@@ -15,7 +15,7 @@
     --color-warning: #ffbb55;
 
     /* --- Sombra da Caixa --- */
-    --box-shadow: 0 2rem 3rem var(--secondary-color-light);
+    --box-shadow: 0 1.2rem 0.7rem var(--secondary-color-light);
 
     /* --- Animação de Transição --- */
     --tran-03: all 0.2s ease;
@@ -36,31 +36,16 @@
     color: var(--color-warning);
 }
 
-/* -------------- Menu -------------- */  
-   
-    @media (max-width: 768px) {
-       body {
-    margin-left: 0;
-    margin-top: 150px; 
-       }
-    }
-    
 /*----------Titulo------------*/
-
-header {
-  margin: 0 025px 0;
-}
-
 .titulos h1 {
   color: #003366;
   font-size: 28px;
-  margin-bottom: 8px;
 }
 
-.titulos span{
+.titulos span {
     color: #666;
+    font-size: 13px;
 }
-
 
 .titulos h3 {
   font-size: 14px;
@@ -68,20 +53,17 @@ header {
   font-weight: normal;
 }
 
-/************Principal***********/
-main {
-    padding: 0 0 20px 0;
-    max-width: 1400px;
+.titulos {
+    margin-bottom: 30px;
 }
-
-/***********Cards***************/
+/*-------------Card--------------*/
 
 .card{
     background-color: white;
     border-radius: 12px;
     padding: 24px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+    box-shadow: var(--box-shadow);
     border: 1px solid #e0e0e0;
 }
 
@@ -103,24 +85,13 @@ main {
     margin-top: 2px;
 }
 
-.card-header{
+.card-header {
     color: #003366;
     display: flex;
     align-items: center;
     gap: 8px;
     margin-bottom: 7px;
 }
-
-.card:hover {
-    transform: translateX(2px);
-    box-shadow: 0 4px 12px rgba(0, 51, 102, 0.3);
-}
-
-.card:active {
-    transform: translateY(1);
-}
-
-
 
 .descricao,
 .helper-text {
@@ -131,6 +102,10 @@ main {
     line-height: 1.5;
 }
 
+.card i {
+    font-size: 30px;
+}
+
 /************* Inputs e Selects**************/
 
 .campo input [type="number"],
@@ -138,14 +113,14 @@ main {
 .campo select {
     width: 100%;
     padding: 12px 16px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #aaa;
     border-radius: 8px;
 }
 
 input{
     width: 100%;
     padding: 12px 16px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #aaa;
     border-radius: 8px;
 }
 
@@ -160,9 +135,10 @@ input{
 .campo label{
     display: block;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     color: #003366;
     margin-bottom: 8px;
+    margin-top: 15px;
 }
 
 /*********** Botão **************/
@@ -175,7 +151,7 @@ input{
 }
 
 #btn-salvar{
-    background: #0066cc;
+    background: linear-gradient(to right, #015cb9, #013973);
     color: white;
     padding: 12px 32px;
     border: none;
