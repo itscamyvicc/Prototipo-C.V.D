@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentos</title>
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="/view/css/documentos.css">
 
-    <link rel="stylesheet" href="/css/documentos.css">
+    <!-- ===== BOXICONS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 
-    <!-- CABEÇALHO DA PÁGINA -->
+    <!-- ===== CABEÇALHO DA PÁGINA ===== -->
     <div class="page-header">
         <div class="page-header-left">
             <h1>Documentos</h1>
@@ -20,24 +22,23 @@
             <i class='bx bx-plus'></i> Novo Documento
         </button>
     </div>
+    <!-- ===== FIM DO CABEÇALHO DA OÁGINA ===== -->
 
-    <!-- TABELA DE CADASTRO -->
+    <!-- ===== TABELA DE CADASTRO ===== -->
     <div class="tabela_primaria">
         <div class="header-container">
             <header>Novo Documento</header>
             <i class='bx bx-x close-icon'></i>
         </div>
-        <form action="#" id="formDocumento">
+        <form action="#" id="formInfo">
             <div class="details">
 
                 <div class="fields">
-                    <!-- Linha 1: Profissional (campo largo) -->
                     <div class="input-field full-width">
                         <label>Profissional <span class="obrigatorio">*</span></label>
                         <input type="text" id="profissional" placeholder="" required>
                     </div>
 
-                    <!-- Linha 2: Tipo de Documento + Número do Documento -->
                     <div class="input-field">
                         <label>Tipo de Documento <span class="obrigatorio">*</span></label>
                         <select id="tipo-documento" placeholder="COREN" required>
@@ -53,7 +54,6 @@
                         <input type="text" id="numero-documento" placeholder="">
                     </div>
 
-                    <!-- Linha 3: Órgão Emissor + Data de Emissão -->
                     <div class="input-field">
                         <label>Órgão Emissor</label>
                         <input type="text" id="orgao-emissor" placeholder="">
@@ -63,7 +63,6 @@
                         <input type="date" id="data-emissao">
                     </div>
 
-                    <!-- Linha 4: Data de Validade + Alertar (em dias) -->
                     <div class="input-field">
                         <label>Data de Validade</label>
                         <input type="date" id="data-validade">
@@ -80,13 +79,13 @@
             </div>
         </form>
     </div>
-    <!-- FIM DA TABELA DE CADASTRO -->
+    <!-- ===== FIM DA TABELA DE CADASTRO ===== -->
 
-    <!-- LISTA DE DOCUMENTOS -->
+    <!-- ===== LISTA DE DOCUMENTOS ===== -->
     <section class="lista-profissionais">
         <div class="conteudo-lista">
 
-            <!-- FILTRAGEM -->
+            <!-- ===== FILTRAGEM ===== -->
             <div class="topo-lista">
                 <div class="busca">
                     <i class='bx bx-search'></i>
@@ -104,7 +103,7 @@
                 </div>
             </div>
 
-            <!-- CARD DE DOCUMENTO -->
+            <!-- ===== CARD DE DOCUMENTO ===== -->
             <div class="card-profissional">
                 <div class="avatar avatar-doc">
                     <i class='bx bx-file'></i>
@@ -129,17 +128,9 @@
 
         </div>
     </section>
-    <!-- FIM DA LISTA DE DOCUMENTOS -->
+    <!-- ===== FIM DA LISTA DE DOCUMENTOS ===== -->
 
-    <script>
-        const form = document.getElementById('formDocumento');
-
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Documento cadastrado com sucesso!');
-            form.reset();
-        });
-    </script>
-
+    <!-- ===== SCRIPTS ===== -->
+    <script src="../js/confirmarCadastro.js"></script>
 </body>
 </html>

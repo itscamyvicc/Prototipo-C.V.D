@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profissionais</title>
-    <!-- CSS -->
+    <!-- ===== CSS ===== -->
     <link rel="stylesheet" href="/css/profissionais.css">
-    <!-- BOXICONS -->
+
+    <!-- ===== BOXICONS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 
-<!-- CABEÇALHO DA PÁGINA -->
+<!-- ===== CABEÇALHO DA PÁGINA ===== -->
     <div class="page-header">
         <div class="page-header-left">
             <h1> Profissinais </h1>
@@ -22,7 +23,7 @@
         </button>
     </div>
 
-    <!-- TABELA DE CADASTRO -->
+    <!-- ===== TABELA DE CADASTRO ===== -->
     <div class="tabela_primaria">
         <div class="header-container">
             <header>Novo Profissional</header>
@@ -30,7 +31,7 @@
         </div>
         
 
-        <form action="#" id="formProfissionais"> 
+        <form action="#" id="formInfo"> 
             <div class="details">
 
                 <div class="fields">
@@ -76,18 +77,18 @@
                 </div>
                 <div class="form-actions">
                 <button class="button btn-cancelar" type="reset">Cancelar</button>
-                <button class="button btn-cadastrar" type="submit">Cadastrar</button>
+                <button onclick="confirmarCadastro()" class="button btn-cadastrar" type="submit">Cadastrar</button>
                 </div>
             </div>
         </form>
     </div>
-    <!-- FIM DA TABELA DE CADASTRO -->
+    <!-- ===== FIM DA TABELA DE CADASTRO ===== -->
 
-    <!-- LISTA DE PROFISSIONAIS -->
+    <!-- ===== LISTA DE PROFISSIONAIS ===== -->
     <section class="lista-profissionais">
         <div class="conteudo-lista">
 
-            <!-- FILTRAGEM -->
+            <!-- ===== FILTRAGEM ===== -->
             <div class="topo-lista">
                 <div class="busca">
                     <i class='bx bx-search'></i>
@@ -103,7 +104,7 @@
                 </div>
             </div>
 
-            <!-- CARDS -->
+            <!-- ===== CARDS ===== -->
             <div class="card-profissional">
                 <div class="avatar"> C </div>
 
@@ -129,16 +130,18 @@
 
         </div>
     </section>
-    <!-- FIM DA LISTA DE PROFISSIONAIS -->
-    <script src="../js/script.js"></script>
+    <!-- ===== FIM DA LISTA DE PROFISSIONAIS ===== -->
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="../js/formatarInfoProf.js"></script>
     <script>
-        const form = document.getElementById('formProfissionais');
+        const form = document.getElementById('formInfo');
 
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             alert('Documento cadastrado com sucesso!');
             form.reset();
-        });
+        })
     </script>
 </body>
 </html>

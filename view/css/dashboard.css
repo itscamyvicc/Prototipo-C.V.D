@@ -4,11 +4,11 @@
     --body-color: #E4E9F7;
     --primary-color: #124b92;
     --secondary-color-light: rgba(132, 139, 200, 0.18);
-    --box-shadow: 0 2rem 3rem var(--secondary-color-light);
+    --box-shadow: 0 1.2rem 0.7rem var(--secondary-color-light);
     --tran-03: all 0.3s ease;
 }
 
-/* -------------- Título da Página -------------- */
+/* ------------------ Título da Página ---------------- */
 .page-title {
     font-size: 26px;
     font-weight: 700;

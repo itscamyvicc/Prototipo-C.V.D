@@ -2,22 +2,22 @@ const conteudo = document.getElementById('conteudo-principal');
 
 // Mapa de telas: chave = data-tela, valor = caminho do arquivo HTML
 const telas = {
-    dashboard:          '/telas/dashboard.html',
-    profissionais:      '/telas/profissionais.html',
-    documentos:         '/telas/documentos.html',
-    alertas:            '/telas/alertas.html',
-    importar_exportar:  '/telas/dados.html',
-    config:      '/telas/config.html',  
+    dashboard:          '/view/dashboard.html',
+    profissionais:      '/view/profissionais.html',
+    documentos:         '/view/documentos.html',
+    alertas:            '/view/alertas.html',
+    importar_exportar:  '/view/dados.html',
+    config:             '/view/config.html',  
 };
 
 // CSS específico de cada tela (carregados dinamicamente)
 const cssTelas = {
-    dashboard:          '/css/dashboard.css',
-    profissionais:      '/css/profissionais.css',
-    documentos:         '/css/documentos.css',
-    alertas:            '/css/alertas.css',
-    importar_exportar:  '/css/dados.css',
-    config:      '/css/config.css',
+    dashboard:          '/view/css/dashboard.css',
+    profissionais:      '/view/css/profissionais.css',
+    documentos:         '/view/css/documentos.css',
+    alertas:            '/view/css/alertas.css',
+    importar_exportar:  '/view/css/dados.css',
+    config:             '/view/css/config.css',
 };
 
 // CSS já carregados (evita duplicatas)

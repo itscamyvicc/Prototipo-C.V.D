@@ -153,7 +153,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: var(--tran-03);
     font-family: 'Poppins', sans-serif;
   }
 
@@ -206,10 +205,5 @@ header {
     font-weight: 500;
     cursor: pointer;
     margin-top: auto;
-    transition: all 0.3s ease;
 
   }
-
-  .btn-primary:hover {
-  background-color: #0052a3;
-}

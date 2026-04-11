@@ -8,27 +8,16 @@
 }
 
 :root {
-    --body-color: #E4E9F7;
     --sidebar-color: #003366;
-    --primary-color: #1755a0;
-    --primary-color-light: #F6F5FF;
-    --toggle-color: #DDD;
-    --text-color: #F8F9FA;
+    --primary-color: #124b92;
     --secondary-color-light: rgba(132, 139, 200, 0.18);
+    --text-color: #F8F9FA;
+    --box-shadow: 0 2rem 3rem var(--secondary-color-light);
 
     /* --- Cores de Notificação --- */
     --color-danger: #ff7782;
     --color-sucess: #41f1b6;
     --color-warning: #ffbb55;
-
-    /* --- Sombra da Caixa --- */
-    --box-shadow: 0 2rem 3rem var(--secondary-color-light);
-
-    /* --- Animação de Transição --- */
-    --tran-03: all 0.2s ease;
-    --tran-03: all 0.3s ease;
-    --tran-04: all 0.4s ease;
-    --tran-05: all 0.5s ease;
 }
 
 .danger {
@@ -43,26 +32,17 @@
     color: var(--color-warning);
 }
 
-/* -------------- Menu -------------- */
 body {
     height: 100vh;
-    background: var(--body-color);
-
+    overflow: hidden;
+    background: #f2f2f2;
 }
-
-@media (max-width: 768px) {
-    body {
-        margin-left: 0;
-        margin-top: 150px; 
-    }
-}
-
 /********** Container Principal ***********/
 
-.container{
+.container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 /*************** Branding *************/
@@ -72,7 +52,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 50px;
 }
 
 .logo-container {
@@ -81,7 +60,6 @@ body {
     grid-template-rows: auto auto;
     align-items: center;
     column-gap: 50px;
-    row-gap: 4px;
     color: white;
 }
 
@@ -91,10 +69,8 @@ body {
 }
 
 .logo img {
-    width: 215px;
-    height: 230px;
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
-    
+    width: 100%;
+    height: 100%;
 }
 
 .logo-container h1 {
@@ -133,19 +109,10 @@ body {
 .form-container {
     background: #fff;
     border-radius: 12px;
-    padding: 70px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 55px;
     width: 100%;
-    max-width: 470px;
-}
-
-.form-container:hover{
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.3);
-}
-
-.form-container:active{
-  transform: translateY(2);
+    max-width: 80%;
+    box-shadow: var(--box-shadow);
 }
 
 /********** Botão Voltar ***********/
@@ -158,13 +125,7 @@ body {
     text-decoration: none;
     font-size: 17px;
     margin-bottom: 32px;
-    transition: all 0.3s ease;
 }
-
-.btn-voltar:hover{
-    color: #003366;
-}
-
 
 /********** Header do Formulário **********/
 
@@ -181,7 +142,8 @@ body {
 }
 
 .form-header p {
-    font-size: 18px;
+    font-size: 15px;
+    font-weight: 500;
 }
 
 /*********** Botão Google *************/
@@ -200,14 +162,7 @@ body {
     font-weight: 500;
     color: #003366;
     cursor: pointer;
-    transition: all 0.3s ease;
-    margin-bottom: 20px;
-}
-
-.btn-google:hover {
-    background: #003366;
-    color: #fff;
-    border: #003366;
+    margin-bottom: 35px;
 }
 
 /********** Divisor OU ********/
@@ -215,7 +170,7 @@ body {
 .divider {
     display: flex;
     align-items: center;
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 
 .divider::before,
@@ -223,7 +178,6 @@ body {
   content: '';
   flex: 1;
   height: 1px;
-  background: var(--box-shadow);
 }
 
 .divider span {
@@ -244,7 +198,6 @@ form {
     margin-bottom: 20px;
 }
 
-
 .input-group label {
     display: block;
     font-size: 17px;
@@ -257,22 +210,10 @@ form {
     width: 100%;
     padding: 10px 20px;
     font-size: 17px;
-    border: 1px solid var(#666);
+    border: 1px solid #555;
     border-radius: 8px;
     background: white;
-    color: #000;
-    transition: all 0.3s ease;
     font-family: 'Poppins', sans-serif;
-}
-
-.input-group input::placeholder {
-    color: #aaaaaa;
-}
-
-.input-group input:focus {
-    outline: none;
-    border-color: #003366;
-    box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.1);
 }
 
 /********* Botão Principal **********/
@@ -280,26 +221,16 @@ form {
 .btn-primary {
     width: 100%;
     padding: 11px 24px;
-    background: #003366;
-    margin: 3px;
+    background: linear-gradient(to right, #015cb9, #013973);
     color: white;
     border: none;
     border-radius: 8px;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 500;
     cursor: pointer;
-    transition: all 0.3s ease;
     font-family: 'Poppins', sans-serif;
-}
-
-.btn-primary:hover {
-    background: #003366;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 51, 102, 0.3);
-}
-
-.btn-primary:active {
-    transform: translateY(0);
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /********* Link de Cadastro ***********/
@@ -309,14 +240,13 @@ form {
     font-size: 17px;
     font-weight: 600;
     color: #003366;
-    margin-bottom: 20px;
+    margin-top: px;
 }
 
 .link-cadastro a {
     color: #003366;
     text-decoration: none;
     font-weight: 500;
-    transition: all 0.3s ease;
 }
 
 .link-cadastro a:hover {

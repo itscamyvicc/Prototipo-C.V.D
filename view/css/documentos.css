@@ -51,7 +51,6 @@
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
-    transition: var(--tran-03);
     margin-bottom: 20px;
 }
 
