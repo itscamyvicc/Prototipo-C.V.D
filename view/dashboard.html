@@ -9,7 +9,6 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-
     <!-- CABEÇALHO -->
     <h1 class="page-title">Painel de Controle</h1>
 
@@ -103,9 +102,10 @@
 
     </div>
 
-    <!-- LINHA INFERIOR: GRÁFICOS -->
+    <!-- GRÁFICOS -->
     <div class="linha-graficos">
 
+        <!-- GRÁFICO DE COLUNA -->
         <div class="card-secao">
             <h2 class="grafico-titulo">Documentos em Atraso por Setor</h2>
             <div class="grafico-container">
@@ -113,6 +113,7 @@
             </div>
         </div>
 
+        <!-- GRÁFICO DE ROSCA -->
         <div class="card-secao">
             <h2 class="grafico-titulo">Tipos de Documento</h2>
             <div class="grafico-container">
@@ -122,9 +123,17 @@
 
     </div>
 
+    <!-- GRÁFICO DE LINHAS -->
+    <div class="card-secao">
+        <h2 class="grafico-titulo">Status Geral dos Documentos</h2>
+        <div class="grafico-container">
+            <canvas id="graficoLinhas"></canvas>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-        // --- Gráfico de Barras ---
+        // --- GRÁFICO DE COLUNAS ---
         function iniciarGraficos() {
         const ctxBarras = document.getElementById('graficoBarras').getContext('2d');
         new Chart(ctxBarras, {
@@ -132,10 +141,11 @@
             data: {
                 labels: ['Enfermagem', 'Fisioterapia', 'Radiologia', 'Emergência', 'Terapia'],
                 datasets: [{
-                    data: [1, 0.8, 0.5, 0.8, 0.3],
+                    data: [5, 4, 3, 4, 2],
                     backgroundColor: '#124b92',
                     borderRadius: 6,
                     borderSkipped: false,
+                    barThickness: 60,
                 }]
             },
             options: {
@@ -145,7 +155,7 @@
                 scales: {
                     y: {
                         beginAtZero: true,
-                        ticks: { stepSize: 0.25 },
+                        ticks: { stepSize: 1 },
                         grid: { color: 'rgba(0,0,0,0.05)' }
                     },
                     x: {
@@ -155,7 +165,7 @@
             }
         });
 
-        // --- Gráfico de Rosca ---
+        // --- GRÁFICO DE ROSCA ---
         const ctxRosca = document.getElementById('graficoRosca').getContext('2d');
         new Chart(ctxRosca, {
             type: 'doughnut',
@@ -198,8 +208,70 @@
             }
         });
     }
-    iniciarGraficos();  
-    </script>
+    iniciarGraficos();
 
+        // --- GRÁFICO DE LINHAS ---
+        const ctxLinhas = document.getElementById('graficoLinhas').getContext('2d');
+        new Chart(ctxLinhas, {
+            type: 'line',
+            data: {
+                labels: ['dez', 'jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov'],
+                datasets: [
+                    {
+                        label: 'Válidos',
+                        data: [8, 6, 6, 6, 6, 6, 6, 6, 6, 6, 3, 2],
+                        borderColor: '#42a5f5',
+                        backgroundColor: 'rgba(66,165,245,0.08)',
+                        pointBackgroundColor: '#42a5f5',
+                        tension: 0.3,
+                        fill: false,
+                    },
+                    {
+                        label: 'Vencendo',
+                        data: [0, 2, 2, 2, 2, 2, 2, 2, 2, 0, 3, 5],
+                        borderColor: '#1565c0',
+                        backgroundColor: 'rgba(21,101,192,0.08)',
+                        pointBackgroundColor: '#1565c0',
+                        tension: 0.3,
+                        fill: false,
+                    },
+                    {
+                        label: 'Vencidos',
+                        data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+                        borderColor: '#003366',
+                        backgroundColor: 'rgba(0,51,102,0.08)',
+                        pointBackgroundColor: '#003366',
+                        tension: 0.3,
+                        fill: false,
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: { size: 12, family: 'Poppins' },
+                            padding: 20,
+                            usePointStyle: true,
+                            pointStyleWidth: 17,
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: { stepSize: 2 },
+                        grid: { color: 'rgba(0,0,0,0.05)' }
+                    },
+                    x: {
+                        grid: { color: 'rgba(0,0,0,0.05)' }
+                    }
+                }
+            }
+});
+    </script>
 </body>
 </html>
